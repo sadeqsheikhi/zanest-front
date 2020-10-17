@@ -1,0 +1,38 @@
+// vendors
+
+// abstract
+@import "abstract/variables";
+@import "abstract/mixins";
+@import "abstract/functions";
+
+// basic
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+
+// layouts
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/navigation";
+
+// pages
+@import "pages/home";
+
+
+// components
+
+
+h1 {
+  text-align: center;
+  width: 100%;
+	position:absolute;
+	top: 50%;
+	color: indianred;
+	font-size: 100px;
+	font-family: 'Arial' , sans-serif;
+	transform: translateY(-50%);
+}
+
