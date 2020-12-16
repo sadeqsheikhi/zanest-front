@@ -11,17 +11,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 {
     module.exports = {
         // specify the src main js file
-        entry: "./src/js/app.js",
+        entry: {
+        src: ['./src/js/app.js'],
+        },
+
         // where the main js file should go
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: "js/bundle.js"
+            filename: "js/bundle.js",
         },
 
-        // with this, the webpack-dev-server know where to run
-        devServer: {
-            contentBase: './dist'
-        },
+        target: "web",
 
         plugins: [
 
