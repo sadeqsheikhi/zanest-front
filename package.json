@@ -1,7 +1,7 @@
 {
-  "name": "sadeq.io",
-  "version": "1.0.0",
-  "description": "A Portfolio Website For Sadeq Sheikhi",
+  "name": "Zanest",
+  "version": "0.0.1",
+  "description": "Management Software for English Institutions",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
@@ -9,7 +9,7 @@
     "start": "webpack serve --mode development --open chrome"
   },
   "author": "Sadeq Sheikhi",
-  "license": "ISC",
+  "license": "Personal",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
@@ -36,4 +36,5 @@
     "last 2 versions",
     "not dead"
   ]
+
 }
