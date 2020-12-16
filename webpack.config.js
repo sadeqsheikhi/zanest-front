@@ -29,6 +29,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             new HtmlWebpackPlugin({
                 filename: "index.html",
                 template: "./src/index.html",
+                inject: "body",
                 minify: {
                     collapseWhiteSpace: true,
                     collapseInlineTagWhiteSpace: true,
