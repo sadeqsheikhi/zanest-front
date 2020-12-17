@@ -1,2 +1,6 @@
+import "tailwindcss/base.css"
+import "tailwindcss/components.css"
+import "tailwindcss/utilities.css"
 import "../sass/main.scss"
 import "../media/favicon.png"
+import "../media/logofull.png"

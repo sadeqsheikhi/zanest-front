@@ -23,12 +23,28 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             contentBase: './dist'
         },
 
+        target: "web",
+
         plugins: [
 
             // from where to where, and specify minify options(optional and can be false)
             new HtmlWebpackPlugin({
                 filename: "index.html",
                 template: "./src/index.html",
+                inject: "body",
+                minify: {
+                    collapseWhiteSpace: true,
+                    collapseInlineTagWhiteSpace: true,
+                    minifyCSS: true,
+                    minifyJS: true,
+                    minifyURLs:true,
+                    removeComments: true,
+                }
+            }),
+
+            new HtmlWebpackPlugin({
+                filename: "_login.scss",
+                template: "./src/_login.scss",
                 inject: "body",
                 minify: {
                     collapseWhiteSpace: true,
@@ -64,6 +80,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                             presets: ['@babel/preset-env']
                         }
                     }
+                },
+                // then processes them using postcss and autoprefixer inside of that
+                // then css files get handles by css loader and style loader attaches them to the js
+                {
+                    test: /\.css$/,
+                    use: [
+                        'style-loader',
+                        'css-loader',
+                        'postcss-loader'
+                    ]
                 },
 
                 // first reads through scss files through sass-loader

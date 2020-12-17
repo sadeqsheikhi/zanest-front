@@ -1,17 +1,33 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-grey;
+@font-face {
+  font-family: iransans;
+  font-weight: normal;
+  src: url("../../fonts/IRANSansWeb.woff") format('woff');
 }
-
-.paragraph {
-  font-size: 1.5rem;
-  font-weight: 400;
-
-  &:not(:last-child) {
-	margin-bottom: 3rem;
-  }
-}
+//body {
+//  font-family: iransans, yekan, tahoma, sans-serif;
+//}
+//
+//h1 {
+//  font-size: 3rem;
+//  margin-bottom: 1rem;
+//}
+//
+//h2 {
+//  font-size: 2.5rem;
+//  margin-bottom: 1rem;
+//}
+//
+//h3 {
+//  font-size: 2.2rem;
+//}
+//
+//.btn {
+//  font-size: 1.8rem;
+//  margin-bottom: 2rem;
+//}
+//
+//p {
+//  font-size: 1.6rem;
+//  margin-bottom: 2rem;
+//}

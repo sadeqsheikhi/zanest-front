@@ -1,24 +1,31 @@
-.u-center-text {
-  text-align: center !important;
+.u-center-v {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
-.u-margin-bottom-big {
-  margin-bottom: 8rem  !important;
-  @include respond(tab-port) {
-    margin-bottom: 6rem !important;
-  }
+.u-center-h {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
-  @include respond(tab-port) {
-    margin-bottom: 3rem !important;
-  }
+.u-center-both {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
 }
 
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem !important;
-  @include respond(tab-port) {
-    margin-bottom: 1rem !important;
-  }
+.rounded-25 {
+  border-radius: 25px;
+}
+
+.padding-3 {
+  padding: 3rem;
+}
+
+.padding-2 {
+  padding: 2rem;
 }

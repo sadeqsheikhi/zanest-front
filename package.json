@@ -1,5 +1,5 @@
 {
-  "name": "Zanest",
+  "name": "zanest",
   "version": "0.0.1",
   "description": "Management Software for English Institutions",
   "main": "index.js",
@@ -29,12 +29,14 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "core-js": "^3.6.5"
+    "core-js": "^3.6.5",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "tailwindcss": "^2.0.2"
   },
   "browserslist": [
     "> 0.25%",
     "last 2 versions",
     "not dead"
   ]
-
 }
