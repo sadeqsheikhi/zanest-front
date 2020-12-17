@@ -39,6 +39,21 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                     removeComments: true,
                 }
             }),
+
+            new HtmlWebpackPlugin({
+                filename: "login.html",
+                template: "./src/login.html",
+                inject: "body",
+                minify: {
+                    collapseWhiteSpace: true,
+                    collapseInlineTagWhiteSpace: true,
+                    minifyCSS: true,
+                    minifyJS: true,
+                    minifyURLs:true,
+                    removeComments: true,
+                }
+            }),
+
             // If you wanna add more files, just add another HtmlWebpackPlugin object(like above)
             // and associate it's options to the file that you want
 
@@ -64,6 +79,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                             presets: ['@babel/preset-env']
                         }
                     }
+                },
+
+                // process css files using postcss and autoprefixer inside of that
+                // then css files get handles by css loader and style loader attaches them to the js
+                {
+                    test: /\.css$/,
+                    use: [
+                        'style-loader',
+                        'css-loader',
+                        'postcss-loader'
+                    ]
                 },
 
                 // first reads through scss files through sass-loader
