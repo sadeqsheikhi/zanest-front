@@ -13,12 +13,12 @@ module.exports = {
   },
     colors: {
       black: '#242424',
-      purple: '#4E3273',
-      pink: '#CC7670',
+      purple: colors.purple,
+      pink: colors.pink,
       gray: colors.blueGray,
-      green: '#148F10',
-      red: '#B61C12',
-      blue: '#0B96D4',
+      green: colors.green,
+      red: colors.red,
+      blue: colors.blue,
       white: '#fff'
     },
     extend: {},

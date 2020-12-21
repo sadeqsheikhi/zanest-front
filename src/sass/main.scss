@@ -1,7 +1,3 @@
-// vendors
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 // abstract
 @import "abstract/variables";
@@ -25,3 +21,9 @@
 @import "pages/login";
 
 // components
+@import "components/components";
+
+// vendors
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

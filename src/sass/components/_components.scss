@@ -1,0 +1,15 @@
+.main-nav {
+    @apply py-8 w-screen h-16 bg-purple-900 text-white flex flex-row flex-nowrap items-center justify-between;
+}
+
+.main-dropdown {
+    @apply shadow-lg absolute w-60 top-95 left-0 text-sm bg-gradient-to-br from-purple-700 to-purple-900;
+}
+
+.main-dropdown-li {
+    @apply flex flex-nowrap justify-between px-3 py-1 hover:bg-pink-900 w-full items-center;
+}
+
+.dropdown-holder {
+    @apply relative;
+}
