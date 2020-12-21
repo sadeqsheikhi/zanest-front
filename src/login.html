@@ -6,45 +6,44 @@
     <link rel="shortcut icon" href="media/favicon.png" type="image/png" id="favicon">
     <title>ورود | زانست</title>
 </head>
-<body>
-
-<div class="container text-center">
-    <div class="col-sm-12 col-md-6 col-lg-4 offset-lg-2 u-center-v text-right">
-        <h1>زانست
-        </h1>
-        <h2>پلتفرم جامع مدیریتی برای آموزشگاه های سراسر کشور
+<body class="font-sans">
+<div class="login-container  bg-black text-white w-screen sm:h-screen flex flex-row m-0 flex-wrap justify-evenly items-center p-8 sm:p-10 text-center">
+    <div class="text-right mt-10 mb-5 order-2 sm:order-1 sm:w-1/2 md:w-2/5">
+        <h1 class="text-4xl">زانست</h1>
+        <h2 class="text-3xl mb-5">پلتفرم جامع مدیریتی برای آموزشگاه های سراسر کشور
         </h2>
-        <p>زانیرا تمام نیازهای مدیریتی یک آموزشگاه زبان را به خوبی پوشش می دهد و با اتوماتیک کردن فرآیندهای وقت گیر، امکان رسیدگی به امور مهمتری را به شما می دهد</p>
-        <button class="btn btn-secondary rounded-25">مشاوره رایگان</button>
+        <p class="mb-5">زانیرا تمام نیازهای مدیریتی یک آموزشگاه زبان را به خوبی پوشش می دهد و با اتوماتیک کردن فرآیندهای وقت گیر، امکان رسیدگی به امور مهمتری را به شما می دهد</p>
+        <button class="btn btn-secondary">مشاوره رایگان</button>
     </div>
 
-    <div class="col-sm-12 col-md-6 col-lg-5 offset-md-6 u-center-v">
+    <div class="flex flex-col justify-between items-center text-black order-1 mb-5 sm:w-1/2 md:w-2/5">
 
-        <div class="login">
-            <div class="logo">
-                <img class="" src="media/logofull.png" alt="لوگوی زانست">
+        <div class="login-box rounded-lg bg-gray-100 bg-opacity-90 p-8 sm:w-3/4">
+            <div class="logo mb-5 flex-row justify-center flex">
+                <img class="w-50" src="media/logofull.png" alt="لوگوی زانست">
             </div>
 
             <form action="#" class="text-right">
-                <div class="form-group">
-                    <label for="login-username">نام کاربری</label>
-                    <input type="text" class="form-control" name="username" id="login-username" aria-describedby="helpId" placeholder="">
+                <div class="">
+                    <label for="login-username" class="hidden">نام کاربری</label>
+                    <input type="text" class="form-control" name="username" id="login-username" aria-describedby="helpId" placeholder="نام کاربری">
                 </div>
-                <div class="form-group">
-                    <label for="login-pass">رمزعبور</label>
-                    <input type="password"
-                           class="form-control" name="" id="login-pass" aria-describedby="helpId" placeholder="">
-                </div>
-
-                <div class="submit-box">
-                    <button type="submit" class="btn btn-primary">ارسال</button>
-                    <a href="#">فراموشی رمز عبور</a>
+                <div> 
+                    <label class="hidden" for="login-pass">رمزعبور</label>
+                    <input type="password" class="form-control" name="" id="login-pass" aria-describedby="helpId" placeholder="رمز عبور">
+                </div> 
+             
+                <div class="mt-5 mb-8 flex flex-row flex-wrap justify-center items-center">
+                    <a href="dashboard.html">
+                        <button class="btn btn-primary text-base mb-2">ورود به پروفایل</button>
+                    </a>
+                    <a class=" text-gray-900 text-sm mr-4 no-underline blue" href="#">فراموشی رمز عبور</a>
                 </div>
             </form>
 
 
-            <p>از زانیرا استفاده نمی کنید؟</p>
-            <button class="btn btn-secondary">با ما آشنا شوید</button>
+            <p class="mb-2">از زانیرا استفاده نمی کنید؟</p>
+            <button class="btn btn-secondary bg-white">با ما آشنا شوید</button>
 
         </div>
 

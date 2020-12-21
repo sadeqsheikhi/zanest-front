@@ -2,32 +2,21 @@
 @font-face {
   font-family: iransans;
   font-weight: normal;
-  src: url("../../fonts/IRANSansWeb.woff") format('woff');
+  src: url("../fonts/IRANSansWeb.woff") format('woff');
 }
-//body {
-//  font-family: iransans, yekan, tahoma, sans-serif;
-//}
-//
-//h1 {
-//  font-size: 3rem;
-//  margin-bottom: 1rem;
-//}
-//
-//h2 {
-//  font-size: 2.5rem;
-//  margin-bottom: 1rem;
-//}
-//
-//h3 {
-//  font-size: 2.2rem;
-//}
-//
-//.btn {
-//  font-size: 1.8rem;
-//  margin-bottom: 2rem;
-//}
-//
-//p {
-//  font-size: 1.6rem;
-//  margin-bottom: 2rem;
-//}
+body{
+  font-family:  sans;
+}
+
+h1 {
+ font-size: 2.5rem;
+ margin-bottom: 1rem;
+}
+
+h2 {
+ font-size: 1.8rem;
+}
+
+h3 {
+ font-size: 1.6rem;
+}

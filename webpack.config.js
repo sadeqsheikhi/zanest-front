@@ -18,19 +18,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             filename: "js/bundle.js"
         },
 
-        // with this, the webpack-dev-server know where to run
-        devServer: {
-            contentBase: './dist'
-        },
-
         target: "web",
 
         plugins: [
 
             // from where to where, and specify minify options(optional and can be false)
             new HtmlWebpackPlugin({
-                filename: "index.html",
-                template: "./src/index.html",
+                filename: "dashboard.html",
+                template: "./src/dashboard.html",
                 inject: "body",
                 minify: {
                     collapseWhiteSpace: true,
@@ -43,8 +38,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             }),
 
             new HtmlWebpackPlugin({
-                filename: "_login.scss",
-                template: "./src/_login.scss",
+                filename: "login.html",
+                template: "./src/login.html",
                 inject: "body",
                 minify: {
                     collapseWhiteSpace: true,
@@ -57,14 +52,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             }),
             // If you wanna add more files, just add another HtmlWebpackPlugin object(like above)
             // and associate it's options to the file that you want
-
-            new CleanWebpackPlugin()
         ],
 
         // used for debugging in the browser and seeing error messages
         // change it to "eval-cheap-module-source-map" once you don't need it
         // it's better security to not allow anyone to access full source map
-        devtool: "source-map",
+        // devtool: "source-map",
 
         // setting up rules and loaders to handle different file types
         module: {
@@ -122,7 +115,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
                 // handling all images and putting them in dist/img
                 {
-                    test: /\.(png|jpe?g|gif)$/i,
+                    test: /\.(png|jpe?g|gif|svg)$/i,
                     use: [
                         {
                             loader: 'file-loader',
@@ -133,7 +126,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                         },
                     ],
                 },
-
+                
                 // putting video files into the dist/media folder
                 {
                     test: /\.(mp4|webm)$/,

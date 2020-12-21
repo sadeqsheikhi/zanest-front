@@ -1,4 +1,8 @@
 // vendors
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // abstract
 @import "abstract/variables";
 @import "abstract/mixins";

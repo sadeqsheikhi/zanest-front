@@ -2,3 +2,29 @@
   background: purple;
   color: white;
 }
+
+body {
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+input {
+  @apply p-3 rounded-md w-full mb-3;
+}
+
+
+.btn {
+  @apply px-8 py-3 rounded-3xl text-lg focus:outline-none;
+
+  border: 1px solid transparent;
+  &:focus {
+    border: 1px solid #333333;
+  }
+  &-secondary {
+    @apply  bg-gray-100 bg-opacity-95 text-black;
+  }
+  &-primary {
+@apply bg-purple text-white;
+  }
+}
+
