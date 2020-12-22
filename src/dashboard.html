@@ -8,12 +8,15 @@
     <title>زانست | مدیریت آموزشگاه زبان</title>
 </head>
 
-<body class="font-sans h-full">
-    <div id="menu-wrapper" class="w-screen h-screen absolute top-0 right-0 overflow-hidden">
+<body class="font-sans">
+    <div id="menu-wrapper">
 
-
-        <nav class="top-nav">
-            <ul class="main-nav h-8v shadow-lg">
+        <!-- =======================================================================================
+ TOP NAVIGATION
+============================================================================================
+-->
+        <nav class="top-nav fixed top-0 right-0 z-20">
+            <ul class="main-nav h-8v shadow-lg w-screen">
                 <li id="menu-toggle" class="border-l-2 h-full border-white p-5">
                     <i class="fas fa-bars cursor-pointer sm:text-lg"></i>
                 </li>
@@ -75,7 +78,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="border-white border-r-2 p-3 h-inherit hover:bg-gray-700 dropdown-holder">
+                <li class="border-white border-r-2 p-3 pl-8 h-inherit hover:bg-gray-700 dropdown-holder">
                     <i class="fas fa-user-circle text-xl"></i>
 
 
@@ -102,8 +105,12 @@
             </ul>
         </nav>
 
+        <!-- =======================================================================================
+ SECONDARY NAVIGATION
+============================================================================================
+-->
         <ul id="secondary-menu"
-            class="hidden md:flex flex-col justify-start h-92v items-center w-56 bg-gradient-to-tr text-white from-purple-900 to bg-black">
+            class="fixed right-0 bottom-0 hidden z-20 md:flex flex-col justify-start h-92v items-center w-56 bg-gradient-to-tr text-white from-purple-900 to bg-black">
             <li class="side-nav-li">
                 <span>داشبورد</span>
                 <i class="text-lg fas fa-tachometer-alt"></i>
@@ -136,6 +143,241 @@
                 <i class="text-lg fas fa-user-friends"></i>
             </li>
         </ul>
+        <!-- =======================================================================================
+ DASHBOARD
+============================================================================================
+-->
+        <main class="w-full flex flex-wrap flex-row justify-evenly items-start pt-10v pb-0 md:pr-56 pt-4">
+            <section class="main-section w-1/4">
+                <div class="section-title">
+                    <hr>
+                    <h3>برنامه امروز</h3>
+                    <hr>
+                </div>
+
+                <div class="section-content">
+
+                    <div class="single-class-container text-center rounded-lg bg-pink-500 text-white p-3">
+                        <h4 class="font-bold text-lg">
+                            Four Corners 2
+                        </h4>
+                        <hr class="bg-gray-300 mb-2 border-gray-300">
+                        <p>صادق شیخی</p>
+                        <p class="mt-2 ltr">
+                            8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub>
+                        </p>
+                    </div>
+
+                    <div class="single-class-container bg-purple-800">
+                        <h4 class="font-bold text-lg">
+                            Four Corners 2
+                        </h4>
+                        <hr class="bg-gray-300 mb-2 border-gray-300">
+                        <p>صادق شیخی</p>
+                        <p class="mt-2 ltr">
+                            8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub>
+                        </p>
+                    </div>
+
+                    <div class="single-class-container bg-gray-700">
+                        <h4 class="font-bold text-lg">
+                            Four Corners 2
+                        </h4>
+                        <hr class="bg-gray-300 mb-2 border-gray-300">
+                        <p>صادق شیخی</p>
+                        <p class="mt-2 ltr">
+                            8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub>
+                        </p>
+                    </div>
+
+
+                    <div class="single-class-container bg-blue-900">
+                        <h4 class="font-bold text-lg">
+                            Four Corners 2
+                        </h4>
+                        <hr class="bg-gray-300 mb-2 border-gray-300">
+                        <p>صادق شیخی</p>
+                        <p class="mt-2 ltr">
+                            8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub>
+                        </p>
+                    </div>
+
+
+                    <div class="single-class-container bg-green-900">
+                        <h4 class="font-bold text-lg">
+                            Four Corners 2
+                        </h4>
+                        <hr class="bg-gray-300 mb-2 border-gray-300">
+                        <p>صادق شیخی</p>
+                        <p class="mt-2 ltr">
+                            8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub>
+                        </p>
+                    </div>
+
+                    <div class="single-class-container bg-pink-700">
+                        <h4 class="font-bold text-lg">
+                            Four Corners 2
+                        </h4>
+                        <hr class="bg-gray-300 mb-2 border-gray-300">
+                        <p>صادق شیخی</p>
+                        <p class="mt-2 ltr">
+                            8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="w-1/4 h-full">
+                <div class="main-section">
+                    <div class="section-title">
+                        <hr>
+                        <h3>تقویم آموزشی</h3>
+                        <hr>
+                    </div>
+
+                    <div class="section-content">
+                        <div class="flex flex-row flex-nowrap">
+                            <div class="flex-1">
+                                <p class="font-bold">
+                                    امروز
+                                </p>
+                                <p>
+                                    شنبه 22 آذر 1399
+                                </p>
+                                <p>
+                                    2020 May 12
+                                </p>
+                                <hr>
+                            </div>
+
+                            <div>
+                                <i class="far fa-calendar-check text-6xl"></i>
+                            </div>
+                        </div>
+
+                        <p>
+                            هیچ مناسبتی برای امروز یافت نشد
+                        </p>
+                    </div>
+                </div>
+
+                <div class="main-section word-of-day relative">
+                    <div class="section-title text-white">
+                        <hr>
+                        <h3 class="uppercase font-bold text-shadow">Word Of The Day</h3>
+                        <hr>
+                    </div>
+                    <div class="section-content text-center text-white">
+
+                        <div class="w-7/12 bg-black bg-opacity-80 p-3 m-10 mx-auto text-xl">
+                            Sticky Note
+                        </div>
+
+
+                        <div class="w-7/12 absolute bottom-1 u-center-h ltr p-1 bg-black bg-opacity-80">
+                            Download Poster
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="main-section">
+                    <div class="section-title">
+                        <hr>
+                        <h3 class="">اخبار زانست</h3>
+                        <hr>
+                    </div>
+                    <div class="section-content">
+                        <div class="p-2 flex-col text-right justify-start items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </div>
+
+                        <div class="p-2 flex-col text-right justify-start items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-5/12">
+                <div class="main-section p-0 h-20 flex flex-row flex-nowrap justify-between items-center rounded-md">
+                    <input type="text" name="search" class="h-full border-l-2 border-gray-500 rounded-none p-5" placeholder="جست و جو برای ...">
+                    <div class="p-2 bg-white h-full border-l-2 border-gray-500">
+                        <span class="text-xs text-gray-500">
+                            گروه
+                        </span>
+                        <select name="students" id="">
+                            <option value="">زبان آموزان</option>
+                            <option value="">اساتید</option>
+                        </select>
+                    </div>
+                    <div class="p-2 bg-white h-full">
+                        <span class="text-xs text-gray-500">
+                            براساس
+                        </span>
+                        <select name="students" id="">
+                            <option value="">نام</option>
+                            <option value="">کدملی</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="main-section flex flex-row flex-nowrap justify-evenly items-center">
+                    <button class="border-2 border-gray-600 rounded-xl p-4 hover:bg-white">
+                        زبان آموز جدید
+                        <i class="fas fa-plus mr-2"></i>
+                    </button>
+                    <button class="border-2 border-gray-600 rounded-xl p-4 hover:bg-white">
+                        استاد جدید
+                        <i class="fas fa-plus mr-2"></i>
+                    </button>
+                    <button class="border-2 border-gray-600 rounded-xl p-4 hover:bg-white">
+                        کلاس جدید
+                        <i class="fas fa-plus mr-2"></i>
+                    </button>
+                </div>
+
+
+            </section>
+
+
+
+
+
+
+            <!-- =======================================================================================
+ FOOTER
+============================================================================================
+-->
+            <footer class="flex-fullrow justify-between items-center bg-gray-300 flex flex-row flex-nowrap p-3 w-full h-16">
+                <p>
+                    تمامی حقوق متعلق به زانست می باشد
+                </p>
+                <div class="text-center md:text-right">
+                    <span class="ml-4">
+                        ترم تحصیلی
+                    </span>
+                    <select name="semester" class="px-3 text-center py-1 rounded-md" id="semeseter">
+                        <option value="#">بهار 98-99</option>
+                        <option value="#">تابستان 98-99</option>
+                        <option value="#">پاییز 78-98</option>
+                    </select>
+                </div>
+            </footer>
+
+        </main>
     </div>
 </body>
 

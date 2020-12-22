@@ -98,3 +98,26 @@
 .w-15v {
   width: 15vw;
 }
+
+@layer utilities {
+  .ltr {
+    direction: ltr;
+  }
+
+  .rtl {
+    direction: rtl;
+  }
+
+  .text-shadow {
+    text-shadow: 0 3px 6px rgba(0,0,0,.6);
+  }
+
+  .pt-10v {
+    padding-top: 10vh;
+  }
+
+  .flex-fullrow {
+    flex: 1 1 100%;
+  }
+}
+
