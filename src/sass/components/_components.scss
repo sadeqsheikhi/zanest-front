@@ -1,17 +1,19 @@
 .main-nav {
-    @apply py-8 w-screen h-16 bg-purple-900 text-white flex flex-row flex-nowrap items-center justify-between;
+    @apply w-screen bg-purple-900 text-white flex flex-row flex-nowrap items-center justify-between;
 }
 
 .main-dropdown {
-    @apply hidden shadow-lg absolute w-60 top-95 left-0 text-sm bg-gradient-to-br from-purple-700 to-purple-900;
+    @apply hidden shadow-lg absolute w-60 top-full left-0 text-sm bg-gradient-to-br from-purple-700 to-purple-900;
 }
-p {
 
-}
 .main-dropdown-li {
     @apply flex flex-nowrap justify-between px-3 py-1 hover:bg-pink-900 w-full items-center;
 }
 
 .dropdown-holder {
     @apply relative;
+}
+
+.side-nav-li {
+    @apply flex h-14 px-4 justify-between w-full border-b-2 border-white items-center hover:bg-pink-900 bg-opacity-70;
 }
