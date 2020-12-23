@@ -51,8 +51,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                 }
             }),
             new HtmlWebpackPlugin({
-                filename: "index.html",
-                template: "./src/index.html",
+                filename: "settings_topics.html",
+                template: "./src/settings_topics.html",
                 inject: "body",
                 minify: {
                     collapseWhiteSpace: true,
@@ -158,4 +158,4 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
         }
 
     }
-}
+} 

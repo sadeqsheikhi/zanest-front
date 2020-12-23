@@ -7,3 +7,4 @@ import "../media/login-bg.jpg"
 
 // js files
 import "./topNav"
+import "./settings"
