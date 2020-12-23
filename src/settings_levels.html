@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png" id="favicon">
+</head>
+
+<body class="font-sans">
+    <div id="wrapper">
+        <!-- =======================================================================================
+ TOP NAVIGATION
+============================================================================================
+-->
+        <nav class="top-nav fixed top-0 right-0 z-20">
+            <ul class="main-nav h-8v shadow-lg w-screen">
+                <li id="menu-toggle" class="border-l-2 h-full border-white p-5">
+                    <i class="fas fa-bars cursor-pointer sm:text-lg"></i>
+                </li>
+                <li class="flex-1 text-center">آموزشگاه جهان</li>
+                <li class="border-white h-full border-r-2 py-4 px-5 hover:bg-gray-700 dropdown-holder relative">
+                    <i class="fas fa-paint-roller text-2xl"></i>
+
+                    <ul class="main-dropdown">
+                        <li class="main-dropdown-li">
+                            پیش فرض
+                            <i class="fas fa-check-circle mr-1"></i>
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-purple-700 to-purple-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            آبی تیره
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-blue-600 to-blue-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            سبز تیره
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-green-600 to-green-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            صورتی
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-pink-400 to-purple-700 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li
+                    class="border-white h-full hidden sm:inline-block border-r-2 p-3  hover:bg-gray-700 dropdown-holder">
+                    <i class="fas fa-bullhorn text-xl"></i>
+
+                    <ul class="main-dropdown p-2">
+                        <li
+                            class="main-dropdown-li flex-col text-right justify-start border-b-2 border-gray-400 items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+
+                        <li class="main-dropdown-li flex-col text-right justify-start border-white items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="border-white border-r-2 p-3 pl-8 h-inherit hover:bg-gray-700 dropdown-holder">
+                    <i class="fas fa-user-circle text-xl"></i>
+
+
+                    <ul class="p-2 main-dropdown w-40">
+                        <li class="main-dropdown-li justify-end border-b-2 border-gray-500">
+                            <a href="#" class="text-gray-400">
+                                صادق شیخی
+                            </a>
+                        </li>
+                        <li class="main-dropdown-li justify-end border-b-2 border-gray-500">
+                            <a href="#">
+                                ویرایش پروفایل
+                            </a>
+                        </li>
+                        <li class="main-dropdown-li justify-end">
+                            <i class="fas fa-sign-out-alt ml-2"></i>
+                            <a href="#">
+                                خروج
+                            </a>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- =======================================================================================
+SECONDARY NAVIGATION
+============================================================================================
+-->
+        <ul id="secondary-menu"
+            class="fixed right-0 bottom-0 hidden z-20 md:flex flex-col justify-start h-92v items-center w-56 bg-gradient-to-tr text-white from-purple-900 to bg-black">
+            <li class="side-nav-li">
+                <span>داشبورد</span>
+                <i class="text-lg fas fa-tachometer-alt"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>کلاس ها</span>
+                <i class="text-lg fas fa-chalkboard"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>زبان آموزان</span>
+                <i class="text-lg fas fa-users"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>اساتید</span>
+                <i class="text-lg fas fas fas fa-user-tie"></i>
+            </li>
+
+            <div class="flex-1"></div>
+
+            <li class=" side-nav-li">
+                <span>تنظیمات</span>
+                <i class="text-lg fas fa-cogs"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>کاربرها</span>
+                <i class="text-lg fas fa-user-friends"></i>
+            </li>
+        </ul>
+
+        <!-- =========================================================================================
+SETTINGS PAGE
+==============================================================================================-->
+        <main class="w-full text-right flex flex-wrap flex-row justify-evenly items-start pt-10v pb-0 md:pr-56 pt-4">
+            <h1 class="flex-fullrow text-white p-10 text-4xl">
+                تنظیمات
+            </h1>
+
+            <div class="settings-bar flex-fullrow h-14 bg-gray-100 mx-10 rounded-full mb-10">
+                <ul class="flex flex-row flex-nowrap justify-between items-center h-full rounded-full">
+                    <li class="rounded-tr-full rounded-br-full setting-active">
+                        سطح های آموزشی
+                    </li>
+                    <li>
+                        سرفصل ها
+                    </li>
+                    <li>
+                        ساختار ترمی
+                    </li>
+                    <li>
+                        ساعات کاری
+                    </li>
+                    <li>
+                        شهریه
+                    </li>
+                    <li class="rounded-tl-full rounded-bl-full">
+                        اطلاعات آموزشگاه
+                    </li>
+                </ul>
+            </div>
+            <!-- =========================================================================================
+SETTINGS BODY
+==============================================================================================-->
+            <section class="w-30p">
+                <div class="main-section">
+                    <div class="section-title-2">
+                        <h2 class="mb-2">
+                            سرفصل های موجود
+                        </h2>
+                        <hr class="mb-4">
+                    </div>
+                    <div class="section-content">
+                        <div class="setting-item setting-item-active">
+                            <span class="ml-4">
+                                A0
+                            </span>
+                            <span class="text-gray-500 text-sm flex-1">
+                                Starter
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+                        <div class="setting-item">
+                            <span class="ml-4">
+                                A1
+                            </span>
+                            <span class="text-gray-500 text-sm flex-1">
+                                Elementary
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+                        <div class="setting-item">
+                            <span class="ml-4">
+                                A2
+                            </span>
+                            <span class="text-gray-500 text-sm flex-1">
+                                Pre-Itermediate
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+                        <div class="setting-item">
+                            <span class="ml-4">
+                                B1
+                            </span>
+                            <span class="text-gray-500 text-sm flex-1">
+                                Intermediate
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+
+                        <div class="setting-item">
+                            <span class="ml-4">
+                                B2
+                            </span>
+                            <span class="text-gray-500 text-sm flex-1">
+                                Pre-Advanced
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+
+                        <div class="setting-item">
+                            <span class="ml-4">
+                                C1
+                            </span>
+                            <span class="text-gray-500 text-sm flex-1">
+                                Advanced
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="w-30p">
+                <!-- seeing single item -->
+                <div class="main-section">
+                    <h2 class="mb-2">
+                        A0
+                    </h2>
+                    <hr class="mb-4">
+
+                    <div class="section-content">
+                        <p>
+                            رده :
+                            <span>Starter</span>
+                        </p>
+                        <p>
+                            توضیحات :
+                            <span>
+                                رده سنی کودکان، بسته به استاد می تواند زودتر یا دیرتر از موعد دو ترم تمام شود.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- editing single item -->
+                <div class="main-section border-pink-400 border-2">
+                    <h2 class="mb-2">
+                        ویرایش
+                        A0
+                    </h2>
+                    <hr class="mb-4">
+
+                    <div class="section-content">
+                        <p>نام سطح</p>
+                        <input type="text" class="mb-4 mt-1 p-2" value="َA0">
+                        <p class="mb-4">
+                            رده :
+                            <select name="level" id="" class="px-5 border-black border-2 rounded">
+                                <option value="#">Starter</option>
+                                <option value="#">Elementary</option>
+                                <option value="#">Pre-Intermediate</option>
+                                <option value="#">Intermediate</option>
+                                <option value="#">Pre-Advanced</option>
+                                <option value="#">Advanced</option>
+                                <option value="#">Proficcient</option>
+                            </select>
+                        </p>
+
+                        <div>
+                            توضیحات :
+                            <br>
+                            <textarea name="description" cols="3" rows="4" class="p-2 w-full"
+                                placeholder="توضیحات خود را بنویسید..."></textarea>
+                        </div>
+
+                        <div class="save-cancel ">
+                            <button>
+                                ذخیره تغییرات
+                            </button>
+                            <button class="cancel-button">
+                                انصراف
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </section>
+            <section class="w-30p">
+                <!-- adding a new topic -->
+                <div class="main-section">
+                    <button class="add-topic btn btn-secondary border-2 border-black">
+                        ایجاد سرفصل جدید
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+
+                <!-- adding a single item -->
+                <div class="main-section hidden">
+                    <h2 class="mb-2">
+                        ایجاد سطج جدید
+                    </h2>
+                    <hr class="mb-4">
+
+                    <div class="section-content">
+                        <p>نام سطح</p>
+                        <input type="text" class="mb-4 mt-1 p-2">
+                        <p class="mb-4">
+                            رده :
+                            <select name="level" id="" class="px-5 border-black border-2 rounded">
+                                <option value="#">Starter</option>
+                                <option value="#">Elementary</option>
+                                <option value="#">Pre-Intermediate</option>
+                                <option value="#">Intermediate</option>
+                                <option value="#">Pre-Advanced</option>
+                                <option value="#">Advanced</option>
+                                <option value="#">Proficcient</option>
+                            </select>
+                        </p>
+
+                        <div>
+                            توضیحات :
+                            <br>
+                            <textarea name="description" cols="3" rows="4" class="p-2 w-full"
+                                placeholder="توضیحات خود را بنویسید..."></textarea>
+                        </div>
+
+                        <div class="save-cancel ">
+                            <button>
+                                ذخیره تغییرات
+                            </button>
+                            <button class="cancel-button">
+                                انصراف
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- =======================================================================================
+ FOOTER
+============================================================================================
+-->
+            <footer
+                class="flex-fullrow justify-between items-center bg-gray-300 flex flex-row flex-nowrap p-3 w-full h-16">
+                <p>
+                    تمامی حقوق متعلق به زانست می باشد
+                </p>
+                <div class="text-center md:text-right">
+                    <span class="ml-4">
+                        ترم تحصیلی
+                    </span>
+                    <select name="semester" class="px-3 text-center py-1 rounded-md" id="semeseter">
+                        <option value="#">بهار 98-99</option>
+                        <option value="#">تابستان 98-99</option>
+                        <option value="#">پاییز 78-98</option>
+                    </select>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+</body>
+
+</html>
