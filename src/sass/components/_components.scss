@@ -101,3 +101,12 @@ main {
         @apply mb-4;
     }
 }
+
+
+main {
+    @apply w-full pb-24 relative text-right flex flex-wrap flex-row justify-evenly items-start pt-10v md:pr-56 pt-4 min-h-screen;
+}
+
+footer {
+ @apply flex-fullrow justify-between items-center bg-gray-300 flex flex-row flex-nowrap p-3 w-full h-16 absolute bottom-0 left-0 md:pr-64 mt-10;
+}
