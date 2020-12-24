@@ -76,6 +76,19 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                     removeComments: true,
                 }
             }),
+            new HtmlWebpackPlugin({
+                filename: "settings_semesters.html",
+                template: "./src/settings_semesters.html",
+                inject: "body",
+                minify: {
+                    collapseWhiteSpace: true,
+                    collapseInlineTagWhiteSpace: true,
+                    minifyCSS: true,
+                    minifyJS: true,
+                    minifyURLs:true,
+                    removeComments: true,
+                }
+            }),
             // If you wanna add more files, just add another HtmlWebpackPlugin object(like above)
             // and associate it's options to the file that you want
         ],
