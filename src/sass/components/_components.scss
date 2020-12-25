@@ -1,3 +1,6 @@
+// ======================================================================================================
+// NAVIGATION AND DROPDOWN
+// ======================================================================================================
 .main-nav {
     @apply w-screen bg-purple-900 text-white flex flex-row flex-nowrap items-center justify-between;
 }
@@ -18,58 +21,55 @@
     @apply flex h-14 px-4 justify-between w-full border-b-2 border-white items-center hover:bg-pink-900 bg-opacity-70;
 }
 
-.single-class-container {
-    @apply mb-4 text-center rounded-lg bg-pink-500 text-white p-3;
-}
-
-.main-section {
-    @apply w-full bg-gray-100 rounded-lg p-5 mb-5;
-}
-
-.section-title {
-    @apply flex flex-nowrap mb-6 items-center justify-center;
-
-    hr {
-        @apply h-1 flex-1 bg-gray-400 border-gray-400 rounded-25;
-    }
-
-    h3 {
-        @apply px-2
-    }
-}
 
 
-.word-of-day {
-    background-color: purple;
-    background: url("../media/wordofday.jpg") no-repeat center center;
-    background-size: cover;
-}
-
+// ======================================================================================================
+// RECURRENT ELEMENTS
+// ======================================================================================================
 main {
-    background: white;
+    @apply w-full pb-24 relative text-right flex flex-wrap
+    flex-row justify-evenly items-start pt-10v md:pr-56 pt-4 min-h-screen bg-white bg-cover;
     background: url('../media/main-bg.jpg') fixed top left;
-    background-size: cover;
 }
 
-// ======================================================================================================
-// SETTINGS SECTION 
-// ======================================================================================================
-.setting-active {
-    @apply bg-purple-700 text-white h-full flex flex-row items-center px-10;
+// normal input
+.input-norm {
+    @apply p-4 my-2 shadow rounded-md;
 }
 
-.settings-bar ul li {
-    @apply px-10;
+footer {
+ @apply flex-fullrow justify-between items-center bg-gray-300 flex flex-row flex-nowrap p-3 w-full h-16 absolute bottom-0 left-0 md:pr-64 mt-10;
 }
 
-.setting-item  {
-    @apply flex justify-between items-center p-4 bg-gray-300 rounded-lg mb-3;
-}
+// ============== BUTTONS
+.btn {
+    @apply px-8 py-3 rounded-3xl text-lg focus:outline-none;
+  
+    border: 1px solid transparent;
+    &:focus {
+      border: 1px solid #333333;
+    }
+    &-secondary {
+      @apply  bg-gray-100 bg-opacity-95 text-black;
+    }
+    &-primary {
+  @apply bg-purple-900 text-white;
+    }
 
-.setting-item-active {
-    @apply  bg-pink-300;
-}
+    &-success {
+        @apply bg-green-400 p-3 rounded-sm;
+    }
 
+    &-cancel {
+        @apply bg-gray-300 p-3 text-red-600;
+    }
+
+    &-delete {
+        @apply bg-red-300 p-3;
+    }
+  }
+
+// ============ SAVE OR CANCEL BUTTONS
 .save-cancel {
     @apply flex flex-row flex-nowrap p-2 justify-between;
     button:first-child {
@@ -88,25 +88,230 @@ main {
     }
 }
 
-// normal input
-.input-norm {
-    @apply p-4 my-2 shadow rounded-md;
-}
 
-.section-title-2 {
-    h2 {
-        @apply font-bold;
+// ========================= SEARCH AND BUTTONS
+.search-and-button {
+    @apply w-full flex flex-nowrap flex-row justify-between px-10 items-center mb-10;
+
+    &.join {
+        @apply mb-0 items-start;
+        > button {
+            @apply h-24
+        }
     }
-    hr {
-        @apply mb-4;
+
+    > button {
+        @apply bg-gray-100 p-5 ml-4 rounded-sm h-full;
+    }
+
+    > div {
+        @apply flex-1 bg-gray-100 flex flex-row rounded-sm flex-nowrap justify-between items-center;
+
+        input, select {
+            @apply p-5 bg-gray-100 rounded-sm h-full;
+        }
+
+        span {
+           @apply text-gray-400 p-5;
+        }
+
+        select {
+            @apply w-36 border-r-2 border-black;
+        }
+    }
+
+}
+
+// ===================== FULL EDIT BOX
+.full-edit-box {
+    @apply p-5 flex flex-row flex-wrap mb-4 h-28 justify-start items-center;
+    > div {
+        @apply flex flex-row flex-wrap h-full;
+        flex: 0 1 calc(100% / 6);
+        span {
+            @apply flex-fullrow text-gray-600 text-sm mb-2;
+        }
+
+        input, select {
+            @apply h-full w-full p-2 rounded-sm border-red-300 border-2;
+        }
+
+        .accepted {
+            @apply border-green-400;
+        }
+    }
+}
+
+// ===================== TIME SELECT BOX
+.time-select {
+    @apply flex flex-row flex-wrap p-5 items-center justify-start;
+    
+    > h3 {
+        @apply flex-fullrow text-sm font-bold mb-4;
+    }
+
+    >div {
+        @apply flex flex-col items-start flex-1;
+        >div {
+            @apply flex items-center mb-2;
+            span {
+                @apply ml-4 text-lg;
+            }
+            i {
+                @apply text-xl;
+            }
+        }
+
+        select {
+            @apply p-2 border-danger;
+        }
+    }
+
+
+}
+// ======================================================================================================
+// DASHBOARD
+// ======================================================================================================
+.single-class-container {
+    @apply mb-4 text-center rounded-lg bg-pink-500 text-white p-3;
+}
+
+
+.word-of-day {
+    background-color: purple;
+    background: url("../media/wordofday.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+
+// ======================================================================================================
+// SECTIONS
+// ======================================================================================================
+
+.main-section {
+    @apply w-full bg-gray-100 rounded-lg p-5 mb-5;
+
+    .section-title {
+        @apply flex flex-nowrap mb-6 items-center justify-center;
+    
+        hr {
+            @apply h-1 flex-1 bg-gray-400 border-gray-400 rounded-25;
+        }
+    
+        h3 {
+            @apply px-2;
+        }
+    }
+
+    .section-title-2 {
+        h2 {
+            @apply font-bold;
+        }
+        hr {
+            @apply mb-4;
+        }
+    }
+}
+
+// ================== BIG SECTION
+.big-section {
+    @apply w-full bg-gray-100 text-right px-10 py-5 mb-16;
+    .section-title {
+        @apply mb-8;
+        h2 {
+            @apply text-xl;
+        }
     }
 }
 
 
-main {
-    @apply w-full pb-24 relative text-right flex flex-wrap flex-row justify-evenly items-start pt-10v md:pr-56 pt-4 min-h-screen;
+// ======================================================================================================
+// SETTINGS SECTION 
+// ======================================================================================================
+
+.settings-bar ul li {
+    @apply px-10;
 }
 
-footer {
- @apply flex-fullrow justify-between items-center bg-gray-300 flex flex-row flex-nowrap p-3 w-full h-16 absolute bottom-0 left-0 md:pr-64 mt-10;
+.setting-active {
+    @apply bg-purple-700 text-white h-full flex flex-row items-center px-10;
+}
+
+.setting-item  {
+    @apply flex justify-between items-center p-4 bg-gray-300 rounded-lg mb-3;
+}
+
+
+.setting-item-active {
+    @apply  bg-pink-300;
+}
+
+
+
+// ======================================================================================================
+// TIME TABLE
+// ======================================================================================================
+.timetable {
+    @apply w-full text-center;
+    tr {
+        @apply border-b-2 border-blue-200 max-h-24;
+
+        td:first-child {
+            @apply  bg-gray-800 text-white;
+        }
+
+        &:nth-child(odd) {
+            @apply bg-green-100;
+        }
+    
+        &:nth-child(even) {
+            @apply bg-purple-200;
+        }
+        &:first-child {
+            @apply bg-pink-700 text-white;
+        }
+    }
+
+    
+    th {
+        @apply p-4 ltr;
+    }
+    td {
+        @apply align-middle border-l-2 border-blue-200;
+        > div {
+            @apply max-h-44 p-4 overflow-auto;
+        }
+    }
+
+    .timetable-item {
+        @apply  rounded-lg p-3 mb-2 bg-gray-500 text-white text-xs;
+        p:first-child {
+            @apply text-sm font-bold flex-fullrow;
+        }
+
+        div:first-child {
+            @apply flex flex-row flex-nowrap items-center justify-between mt-2;
+        }
+    }
+
+
+    // time table for selection
+    &-select {
+         tr {
+             &:nth-child(even) {
+                 @apply bg-green-500;
+             }
+             &:nth-child(odd) {
+                 @apply bg-green-500;
+             }
+
+             &:first-child {
+                @apply bg-pink-700 text-white;
+            }
+         }
+
+         td.error {
+             @apply bg-red-400;
+         }
+    }
 }

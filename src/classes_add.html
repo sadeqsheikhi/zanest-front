@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png" id="favicon">
+</head>
+
+<body class="font-sans">
+    <div id="wrapper">
+        <!-- =======================================================================================
+ TOP NAVIGATION
+============================================================================================
+-->
+        <nav class="top-nav fixed top-0 right-0 z-20">
+            <ul class="main-nav h-8v shadow-lg w-screen">
+                <li id="menu-toggle" class="border-l-2 h-full border-white p-5">
+                    <i class="fas fa-bars cursor-pointer sm:text-lg"></i>
+                </li>
+                <li class="flex-1 text-center">آموزشگاه جهان</li>
+                <li class="border-white h-full border-r-2 py-4 px-5 hover:bg-gray-700 dropdown-holder relative">
+                    <i class="fas fa-paint-roller text-2xl"></i>
+
+                    <ul class="main-dropdown">
+                        <li class="main-dropdown-li">
+                            پیش فرض
+                            <i class="fas fa-check-circle mr-1"></i>
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-purple-700 to-purple-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            آبی تیره
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-blue-600 to-blue-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            سبز تیره
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-green-600 to-green-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            صورتی
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-pink-400 to-purple-700 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li
+                    class="border-white h-full hidden sm:inline-block border-r-2 p-3  hover:bg-gray-700 dropdown-holder">
+                    <i class="fas fa-bullhorn text-xl"></i>
+
+                    <ul class="main-dropdown p-2">
+                        <li
+                            class="main-dropdown-li flex-col text-right justify-start border-b-2 border-gray-400 items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+
+                        <li class="main-dropdown-li flex-col text-right justify-start border-white items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="border-white border-r-2 p-3 pl-8 h-inherit hover:bg-gray-700 dropdown-holder">
+                    <i class="fas fa-user-circle text-xl"></i>
+
+
+                    <ul class="p-2 main-dropdown w-40">
+                        <li class="main-dropdown-li justify-end border-b-2 border-gray-500">
+                            <a href="#" class="text-gray-400">
+                                صادق شیخی
+                            </a>
+                        </li>
+                        <li class="main-dropdown-li justify-end border-b-2 border-gray-500">
+                            <a href="#">
+                                ویرایش پروفایل
+                            </a>
+                        </li>
+                        <li class="main-dropdown-li justify-end">
+                            <i class="fas fa-sign-out-alt ml-2"></i>
+                            <a href="#">
+                                خروج
+                            </a>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- =======================================================================================
+SECONDARY NAVIGATION
+============================================================================================
+-->
+        <ul id="secondary-menu"
+            class="fixed right-0 bottom-0 hidden z-20 md:flex flex-col justify-start h-92v items-center w-56 bg-gradient-to-tr text-white from-purple-900 to bg-black">
+            <li class="side-nav-li">
+                <span>داشبورد</span>
+                <i class="text-lg fas fa-tachometer-alt"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>کلاس ها</span>
+                <i class="text-lg fas fa-chalkboard"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>زبان آموزان</span>
+                <i class="text-lg fas fa-users"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>اساتید</span>
+                <i class="text-lg fas fas fas fa-user-tie"></i>
+            </li>
+
+            <div class="flex-1"></div>
+
+            <li class=" side-nav-li">
+                <span>تنظیمات</span>
+                <i class="text-lg fas fa-cogs"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>کاربرها</span>
+                <i class="text-lg fas fa-user-friends"></i>
+            </li>
+        </ul>
+
+        <!-- =========================================================================================
+START OF THE PAGE
+==============================================================================================-->
+        <main>
+            <div class="flex-fullrow flex items-center text-white p-10">
+                <h1 class="text-4xl ml-8">
+                    مدیریت کلاس ها
+                </h1>
+            </div>
+
+
+            <!-- =========================================================================================
+BODY
+==============================================================================================-->
+            <section class="search-and-button join">
+                <button class="h-28">
+                    <i class="fas fa-plus"></i>
+                    کلاس جدید
+                </button>
+                <div>
+                    <input type="text" placeholder="جست و جو ...">
+                    <span>
+                        براساس
+                    </span>
+                    <select name="" id="" class="">
+                        <option value="">سرفصل</option>
+                        <option value="">استاد</option>
+                        <option value="">مکان فیزیکی</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="big-section">
+                <div class="full-edit-box">
+                    <div>
+                        <span>
+                            سرفصل
+                        </span>
+                        <select name="" id="">
+                            <option value="">انتخاب نشده</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            استاد
+                        </span>
+                        <select name="" id="">
+                            <option value="">انتخاب نشده</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            نوع کلاس
+                        </span>
+                        <select name="" id="">
+                            <option value="">حضوری</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            مکان
+                        </span>
+                        <select name="" id="">
+                            <option value="">انتخاب نشده</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            شهریه ترم
+                        </span>
+                        <input type="number" class="text-xs" placeholder="ابتدا سرفصل را انتخاب کنید">
+                    </div>
+
+                    <div>
+                        <span>
+                            حق التدریس استاد
+                        </span>
+                        <input type="number" class="text-xs" placeholder="ابتدا سرفصل را انتخاب کنید">
+                    </div>
+                </div>
+
+
+                <div class="time-select">
+                    <h3>
+                        انتخاب زمان
+                    </h3>
+
+                    <div>
+                        <div>
+                            <span>
+                                شنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                یکشنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                دوشنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                سه شنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                چهارشنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                پنج شنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+                </div><!-- .time-select -->
+
+                <div class="p-5">
+                    <button class="btn-success ml-10">
+                        ثبت و ادامه
+                    </button>
+                    <button class="btn-cancel">
+                        انصراف
+                    </button>
+                </div>
+            </section>
+
+            <!-- ====================================== Time Table ======================================== -->
+            <section class="big-section">
+                <div class="section-title">
+                    <p>
+                        کلیه ی ساعت هایی که روی برنامه  به رنگ سبز هستند را می توانید در بالا  انتخاب کنید. نگران انتخاب گزینه های قرمز نباشید چون از انتخاب های بالا حذف شده اند
+                    </p>
+                </div>
+
+                <div class="section-content">
+                    <table class="timetable timetable-select w-full">
+                        <tr>
+                            <th>روز/ساعت</th>
+                            <th>8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub></th>
+                            <th>10:00 <sub>A.M</sub> - 11:30 <sub>A.M</sub></th>
+                            <th>2:00 <sub>P.M</sub> - 3:30 <sub>P.M</sub></th>
+                            <th>4:00 <sub>P.M</sub> - 5:30 <sub>P.M</sub></th>
+                            <th>6:00 <sub>P.M</sub> - 7:30 <sub>P.M</sub></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                شنبه
+                            </td>
+                            <td>
+                                <div>
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td class="error">
+                                <div>
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                101
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                یکشنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                دوشنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                سه شنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                چهارشنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                پنج شنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- =======================================================================================
+ FOOTER
+============================================================================================
+-->
+            <footer>
+                <p>
+                    تمامی حقوق متعلق به زانست می باشد
+                </p>
+                <div class="text-center md:text-right">
+                    <span class="ml-4">
+                        ترم تحصیلی
+                    </span>
+                    <select name="semester" class="px-3 text-center py-1 rounded-md" id="semeseter">
+                        <option value="#">بهار 98-99</option>
+                        <option value="#">تابستان 98-99</option>
+                        <option value="#">پاییز 78-98</option>
+                    </select>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+</body>
+
+</html>

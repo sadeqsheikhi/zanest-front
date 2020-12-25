@@ -41,93 +41,47 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                 filename: "login.html",
                 template: "./src/login.html",
                 inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
             }),
             new HtmlWebpackPlugin({
                 filename: "settings_topics.html",
                 template: "./src/settings_topics.html",
                 inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
             }),
             new HtmlWebpackPlugin({
                 filename: "settings_levels.html",
                 template: "./src/settings_levels.html",
                 inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
             }),
             new HtmlWebpackPlugin({
                 filename: "settings_semesters.html",
                 template: "./src/settings_semesters.html",
                 inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
             }),
             new HtmlWebpackPlugin({
                 filename: "settings_times.html",
                 template: "./src/settings_times.html",
                 inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
             }),
 
             new HtmlWebpackPlugin({
                 filename: "settings_inst.html",
                 template: "./src/settings_inst.html",
                 inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
             }),
             new HtmlWebpackPlugin({
                 filename: "users.html",
                 template: "./src/users.html",
                 inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
+            }),
+            new HtmlWebpackPlugin({
+                filename: "classes.html",
+                template: "./src/classes.html",
+                inject: "body",
+            }),
+            new HtmlWebpackPlugin({
+                filename: "classes_add.html",
+                template: "./src/classes_add.html",
+                inject: "body",
             }),
             // If you wanna add more files, just add another HtmlWebpackPlugin object(like above)
             // and associate it's options to the file that you want

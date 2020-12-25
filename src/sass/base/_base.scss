@@ -1,6 +1,13 @@
 ::selection {
-  background: purple;
+  background: rgb(199, 26, 199);
   color: white;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@font-face {
+  font-family: iransans;
+  font-weight: normal;
+  src: url("../fonts/IRANSansWeb.woff") format('woff');
 }
 
 body {
@@ -13,18 +20,5 @@ input {
 }
 
 
-.btn {
-  @apply px-8 py-3 rounded-3xl text-lg focus:outline-none;
 
-  border: 1px solid transparent;
-  &:focus {
-    border: 1px solid #333333;
-  }
-  &-secondary {
-    @apply  bg-gray-100 bg-opacity-95 text-black;
-  }
-  &-primary {
-@apply bg-purple-900 text-white;
-  }
-}
 

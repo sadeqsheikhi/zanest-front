@@ -1,3 +1,7 @@
+@layer utilities {
+
+
+// POSITIONING
 .u-center-v {
   position: absolute;
   top: 50%;
@@ -18,10 +22,16 @@
   transform: translate(-50%, 50%);
 }
 
+.top-95  {
+  top: 95%;
+}
+
+// BORDER-RADIUS
 .rounded-25 {
   border-radius: 25px;
 }
 
+// PADDING UTILITIES
 .padding-3 {
   padding: 3rem;
 }
@@ -30,6 +40,11 @@
   padding: 2rem;
 }
 
+.pt-10v {
+  padding-top: 10vh;
+}
+
+// FLEX BOX PROPERTIES
 .flex-40 {
   flex: 0 1 40%;
 }
@@ -38,11 +53,13 @@
   flex: 0 1 50%;
 }
 
-.top-95  {
-  top: 95%;
+
+.flex-fullrow {
+  flex: 1 1 100%;
 }
 
 
+// HEIGHT OR WEIGHT
 .h-inherit {
   height: inherit;
 }
@@ -99,29 +116,36 @@
   width: 15vw;
 }
 
-@layer utilities {
-  .ltr {
-    direction: ltr;
-  }
+.w-30p {
+  width: 30%;
+}
 
-  .rtl {
-    direction: rtl;
-  }
+// TEXT BASED CLASSES AND UTILITIES
+.ltr {
+  direction: ltr;
+}
 
-  .text-shadow {
-    text-shadow: 0 3px 6px rgba(0,0,0,.6);
-  }
+.rtl {
+  direction: rtl;
+}
 
-  .pt-10v {
-    padding-top: 10vh;
-  }
+.text-shadow {
+  text-shadow: 0 3px 6px rgba(0,0,0,.6);
+}
 
-  .flex-fullrow {
-    flex: 1 1 100%;
-  }
+  
+// border-classes
+.border-danger {
+  @apply border-2 border-red-300;
+}
 
-  .w-30p {
-    width: 30%;
-  }
+.border-success {
+  @apply border-2 border-green-500;
+}
+
+ 
+
+
+// @LAYER
 }
 
