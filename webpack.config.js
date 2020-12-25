@@ -83,6 +83,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                 template: "./src/classes_add.html",
                 inject: "body",
             }),
+            new HtmlWebpackPlugin({
+                filename: "classes_search.html",
+                template: "./src/classes_search.html",
+                inject: "body",
+            }),
             // If you wanna add more files, just add another HtmlWebpackPlugin object(like above)
             // and associate it's options to the file that you want
         ],

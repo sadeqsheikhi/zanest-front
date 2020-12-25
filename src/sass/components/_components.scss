@@ -91,22 +91,28 @@ footer {
 
 // ========================= SEARCH AND BUTTONS
 .search-and-button {
-    @apply w-full flex flex-nowrap flex-row justify-between px-10 items-center mb-10;
+    @apply w-full flex flex-wrap flex-row justify-between px-10 items-start mb-10;
 
     &.join {
-        @apply mb-0 items-start;
+        @apply mb-0;
         > button {
-            @apply h-24
+            @apply h-24;
+        }
+        >div {
+            @apply h-initial;
         }
     }
 
     > button {
-        @apply bg-gray-100 p-5 ml-4 rounded-sm h-full;
+        @apply bg-gray-100 p-5 ml-4 rounded-sm h-18;
     }
 
     > div {
-        @apply flex-1 bg-gray-100 flex flex-row rounded-sm flex-nowrap justify-between items-center;
+        @apply flex-1 bg-gray-100 flex flex-row h-18 rounded-sm relative flex-wrap justify-between items-center;
 
+        div:first-child {
+            @apply flex-fullrow flex flex-row flex-nowrap justify-between items-center;
+        }
         input, select {
             @apply p-5 bg-gray-100 rounded-sm h-full;
         }
@@ -117,6 +123,22 @@ footer {
 
         select {
             @apply w-36 border-r-2 border-black;
+        }
+    }
+
+    div.search-box {
+        @apply flex-fullrow flex flex-row absolute top-full left-0 bg-white z-20 w-full shadow-2xl flex-wrap;
+        ul {
+            @apply flex-fullrow;
+        }
+        li {
+            @apply flex-fullrow flex cursor-pointer flex-row flex-nowrap hover:bg-pink-300 border-gray-600 border-t-2;
+            span {
+                @apply text-black;
+            }
+            span:last-child {
+                @apply flex-1;
+            }
         }
     }
 
