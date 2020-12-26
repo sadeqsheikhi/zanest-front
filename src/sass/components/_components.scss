@@ -65,7 +65,22 @@ footer {
     }
 
     &-delete {
-        @apply bg-red-300 p-3;
+        @apply bg-red-300 p-3 rounded-sm;
+    }
+
+    &-small {
+        @apply p-3 rounded-sm flex bg-white text-black flex-row flex-nowrap justify-start items-center;
+        i {
+            @apply ml-3 text-lg;
+        }
+    }
+
+    &-border {
+        @apply border-2 border-black;
+    }
+
+    &-muted {
+        @apply p-3 bg-gray-200 rounded-sm;
     }
   }
 
@@ -86,6 +101,14 @@ footer {
     button {
      @apply py-2 px-4 bg-green-600 text-white rounded-sm;
     }
+}
+
+
+.class-setting-item.open {
+     @apply border-b-0 rounded-b-none bg-white;
+     .connector {
+         @apply h-18 w-full bg-white block;
+     }
 }
 
 

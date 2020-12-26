@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png" id="favicon">
+</head>
+
+<body class="font-sans">
+    <div id="wrapper">
+        <!-- =======================================================================================
+ TOP NAVIGATION
+============================================================================================
+-->
+        <nav class="top-nav fixed top-0 right-0 z-20">
+            <ul class="main-nav h-8v shadow-lg w-screen">
+                <li id="menu-toggle" class="border-l-2 h-full border-white p-5">
+                    <i class="fas fa-bars cursor-pointer sm:text-lg"></i>
+                </li>
+                <li class="flex-1 text-center">آموزشگاه جهان</li>
+                <li class="border-white h-full border-r-2 py-4 px-5 hover:bg-gray-700 dropdown-holder relative">
+                    <i class="fas fa-paint-roller text-2xl"></i>
+
+                    <ul class="main-dropdown">
+                        <li class="main-dropdown-li">
+                            پیش فرض
+                            <i class="fas fa-check-circle mr-1"></i>
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-purple-700 to-purple-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            آبی تیره
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-blue-600 to-blue-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            سبز تیره
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-green-600 to-green-900 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                        <li class="main-dropdown-li">
+                            صورتی
+                            <div
+                                class="w-20 bg-gradient-to-r border-white border mr-4 from-pink-400 to-purple-700 rounded-3xl h-8 m-2">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li
+                    class="border-white h-full hidden sm:inline-block border-r-2 p-3  hover:bg-gray-700 dropdown-holder">
+                    <i class="fas fa-bullhorn text-xl"></i>
+
+                    <ul class="main-dropdown p-2">
+                        <li
+                            class="main-dropdown-li flex-col text-right justify-start border-b-2 border-gray-400 items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+
+                        <li class="main-dropdown-li flex-col text-right justify-start border-white items-start">
+                            <p class="font-bold">تغییرات نسحه جدید</p>
+                            <p class="text-xs mb-2">اکنون می توانید رنگ منوها را در پنل ادمین عوض کنید</p>
+                            <a href="#" class="text-xs underline">
+                                بیشتر بخوانید
+                                <i class="fas fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="border-white border-r-2 p-3 pl-8 h-inherit hover:bg-gray-700 dropdown-holder">
+                    <i class="fas fa-user-circle text-xl"></i>
+
+
+                    <ul class="p-2 main-dropdown w-40">
+                        <li class="main-dropdown-li justify-end border-b-2 border-gray-500">
+                            <a href="#" class="text-gray-400">
+                                صادق شیخی
+                            </a>
+                        </li>
+                        <li class="main-dropdown-li justify-end border-b-2 border-gray-500">
+                            <a href="#">
+                                ویرایش پروفایل
+                            </a>
+                        </li>
+                        <li class="main-dropdown-li justify-end">
+                            <i class="fas fa-sign-out-alt ml-2"></i>
+                            <a href="#">
+                                خروج
+                            </a>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- =======================================================================================
+SECONDARY NAVIGATION
+============================================================================================
+-->
+        <ul id="secondary-menu"
+            class="fixed right-0 bottom-0 hidden z-20 md:flex flex-col justify-start h-92v items-center w-56 bg-gradient-to-tr text-white from-purple-900 to bg-black">
+            <li class="side-nav-li">
+                <span>داشبورد</span>
+                <i class="text-lg fas fa-tachometer-alt"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>کلاس ها</span>
+                <i class="text-lg fas fa-chalkboard"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>زبان آموزان</span>
+                <i class="text-lg fas fa-users"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>اساتید</span>
+                <i class="text-lg fas fas fas fa-user-tie"></i>
+            </li>
+
+            <div class="flex-1"></div>
+
+            <li class=" side-nav-li">
+                <span>تنظیمات</span>
+                <i class="text-lg fas fa-cogs"></i>
+            </li>
+
+            <li class="side-nav-li">
+                <span>کاربرها</span>
+                <i class="text-lg fas fa-user-friends"></i>
+            </li>
+        </ul>
+
+        <!-- =========================================================================================
+START OF THE PAGE
+==============================================================================================-->
+        <main>
+            <div class="flex-fullrow flex items-center flex-wrap  justify-start text-white p-10">
+                <h1 class="text-2xl flex-fullrow ml-8 mb-5">
+                    مدیریت کلاس ها
+                    <i class="fas fa-chevron-left text-sm"></i>
+                    <span class="text-sm">
+                        ویرایش کلاس
+                    </span>
+                </h1>
+                <button class="btn-small">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                    بازگشت
+                </button>
+            </div>
+
+
+            <!-- =========================================================================================
+BODY
+==============================================================================================-->
+            <div
+                class="hidden confirmation-alert fixed top-0 z-20 flex justify-center bg-black bg-opacity-70 w-full h-full">
+                <div class="confirmation-message fixed top-24 bg-white shadow-2xl p-5 border-danger rounded-md">
+                    <p>
+                        آیا مطمئنید که می خواهید کلاس مورد نظر را حذف کنید؟
+                    </p>
+                    <div class="flex justify-between mt-4">
+                        <button class="btn-delete">
+                            بله مطمئنم
+                        </button>
+                        <button class="btn-muted">
+                            انصراف
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="big-section pb-0">
+                <div class="full-edit-box">
+                    <div>
+                        <span>
+                            سرفصل
+                        </span>
+                        <select name="" id="">
+                            <option value="">انتخاب نشده</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            استاد
+                        </span>
+                        <select name="" id="">
+                            <option value="">انتخاب نشده</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            نوع کلاس
+                        </span>
+                        <select name="" id="">
+                            <option value="">حضوری</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            مکان
+                        </span>
+                        <select name="" id="">
+                            <option value="">انتخاب نشده</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>
+                            شهریه ترم
+                        </span>
+                        <input type="number" class="text-xs" placeholder="ابتدا سرفصل را انتخاب کنید">
+                    </div>
+
+                    <div>
+                        <span>
+                            حق التدریس استاد
+                        </span>
+                        <input type="number" class="text-xs" placeholder="ابتدا سرفصل را انتخاب کنید">
+                    </div>
+                </div>
+
+
+                <div class="time-select">
+                    <h3>
+                        انتخاب زمان
+                    </h3>
+
+                    <div>
+                        <div>
+                            <span>
+                                شنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                یکشنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                دوشنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                سه شنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                چهارشنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span>
+                                پنج شنبه
+                            </span>
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <select name="" id="">
+                            <option value="">بازه ی زمانی</option>
+                        </select>
+                    </div>
+                </div><!-- .time-select -->
+
+                <div class="p-5 w-full flex justify-between mb-4">
+                    <button class="btn-muted ml-10">
+                        ویرایش
+                    </button>
+                    <button class="btn-delete">
+                        حذف
+                    </button>
+                </div>
+
+                <hr>
+
+                <div class="class-settings px-5 mb-0 flex justify-between items-center">
+                    <div
+                        class="class-setting-item open ml-4 flex items-center p-4 border-2 border-b-0 border-gray-400 relative flex-1 justify-center rounded-md">
+                        <span class="font-bold">
+                            مدیریت زبان آموزان
+                        </span>
+                        <i class="fas fa-caret-down text-2xl mr-2"></i>
+                        <div class="hidden connector absolute top-full">&nbsp;</div>
+                    </div>
+
+                    <div class="class-setting-item flex items-center relative  p-4 border-2 border-gray-400 border-b-0 ml-4 rounded-b-none flex-1 justify-center rounded-md">
+                        <span class="font-bold">
+                            مدیریت شهریه
+                        </span>
+                        <i class="fas far fa-caret-up text-2xl mr-2"></i>
+                        <div class="hidden connector absolute top-full"></div>
+                    </div>
+
+                    <div class="flex items-center p-4 border-2 border-gray-400 border-b-0 rounded-b-none flex-1 w-52 justify-center rounded-md">
+                        <span class="font-bold">
+                            افزودن نمرات پایان ترم
+                        </span>
+                        <i class="fas far fa-caret-up text-2xl mr-2"></i>
+                        <div class="hidden connector absolute top-full"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="big-section bg-white p-10 flex flex-row flex-wrap justify-between items-start">
+                <div class="flex-fullrow flex items-end">
+                    <div class="w-8/12">
+                        <p class="mb-3">
+                            اضافه کردن زبان آموزان موجود در سیستم
+                        </p>
+                        <div class="w-full flex flex-row rounded-sm flex-nowrap h-16 items-center border-2 p-3">
+                            <input type="text" placeholder="جست و جو ..." class="flex-1 h-full p-3">
+                            <span class="text-gray-500 text-sm p-3 border-l-2 border-black ml-2">
+                                براساس
+                            </span>
+                            <select name="" id="" class="" class="h-full p-3">
+                                <option value="">نام</option>
+                                <option value="">کدملی</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-30p mr-10">
+                        <button class="btn btn-secondary btn-border border-gray-500">
+                            ایجاد زبان آموز
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="my-2 mt-4 flex-fullrow">
+
+                <!-- student names -->
+                <div class="w-8/12">
+                    <div class="student-names mt-5 mb-5 flex flexrow flex-wrap justify-between items-center">
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+
+                        <div class="setting-item w-48p mb-5">
+                            <span class="flex-1">
+                                صهیب کهنه پوشی
+                            </span>
+                            <span class="mr-4 text-sm text-gray-500 uppercase ml-3">
+                                38104659875
+                            </span>
+                            <i class="far fa-edit text-2xl text-black ml-3"></i>
+                            <i class="far fa-times-circle text-pink-700 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-30p">
+                    <div class="main-section bg-gray-100 w-full mt-4">
+                        <div class="section-title-2">
+                            <p>
+                                ویرایش زبان آموز
+                            </p>
+                            <hr>
+                        </div>
+
+                        <div class="setion-content flex flex-col justify-start items-start">
+                            <div class="mb-4 w-full">
+                                <p class="text-sm px-1 text-black">
+                                    نام زبان آموز
+                                </p>
+                                <input type="text" value="صهیب کهنه پوشی" class="input-norm">
+                            </div>
+
+                            <div class="mb-4 w-full flex flex-row flex-nowrap justify-between items-center">
+                                <div class="w-48p">
+                                    <p class="text-sm px-1 text-black">
+                                        کدملی
+                                    </p>
+                                    <input type="text" value="3810496587" class="input-norm w-full">
+                                    
+                                </div>
+                                <div class="w-48p">
+                                    <p class="text-sm">
+                                        جنسیت
+                                    </p>
+                                    <select name="" id="" class="input-norm w-full">
+                                        <option value="">
+                                            مرد
+                                        </option>
+    
+                                        <option value="">
+                                            زن
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+
+                            <div class="mb-4 w-full">
+                                <p class="text-sm px-1 text-black">
+                                    تاریخ تولد
+                                </p>
+                                <div class="flex flex-row flex-nowrap justify-between items-center">
+                                    <input type="number" placeholder="روز" class="input-norm ml-2" min="1" max="31"
+                                        value="7">
+                                    <input type="number" placeholder="ماه" class="input-norm ml-2" min="1" max="12"
+                                        value="7">
+                                    <input type="number" placeholder="سال" class="input-norm" min="1300" max="1500"
+                                        value="1378">
+                                </div>
+                            </div>
+
+                            <div class="mb-4 w-full flex flex-row flex-nowrap justify-between items-center">
+                                <div class="w-48p">
+                                    <p class="text-sm px-1 text-black">
+                                        نام والد
+                                    </p>
+                                    <input type="text" value="عابد کهنه پوشی" class="input-norm w-full">
+                                    
+                                </div>
+                                <div class="w-48p">
+                                    <p class="text-sm">
+                                        شماره تماس
+                                    </p>
+                                    <input name="" id="" class="input-norm w-full" value="09182958875">
+                                </div>
+                                
+                            </div>
+                        
+                            <div class="mb-4 w-full">
+                                <p class="text-sm px-1 text-black">
+                                    آدرس
+                                </p>
+                                <input type="text" value="مریوان - موسک 2" class="input-norm">
+                            </div>
+
+                            <div>
+                                <button class="btn-muted"> 
+                                    ویرایش
+                                </button>
+                                <button class="btn-cancel">
+                                    انصراف
+                                </button>
+                            </div>
+                        </div> <!-- section.content -->
+                    </div> <!-- main-secion -->
+                </div>
+            </section>
+
+
+            <section class="big-section">
+                <div class="section-title flex flex-row flex-nowrap items-center">
+                    <h2>
+                        اضافه کردن نمرات پایان ترم دانش آموزان
+                    </h2>
+
+                    <button class="btn btn-secondary bg-green-300 mr-4
+">
+                        ذخیره
+                    </button>
+                </div>
+
+                <div class="section-content pb-10">
+                    <ul class="w-full flex flex-wrap items-center justify-between">
+                        <li class="setting-item py-0 p-3 w-30p">
+                            <span class="flex-1">
+                                مبین شهبازی
+                            </span>
+                            <input type="number" class="input-norm w-28" placeholder="نمره" min="1" max="100">
+                        </li>
+
+                        <li class="setting-item py-0 p-3 w-30p">
+                            <span class="flex-1">
+                                مبین شهبازی
+                            </span>
+                            <input type="number" class="input-norm w-28" placeholder="نمره" min="1" max="100">
+                        </li>
+                        <li class="setting-item py-0 p-3 w-30p">
+                            <span class="flex-1">
+                                مبین شهبازی
+                            </span>
+                            <input type="number" class="input-norm w-28" placeholder="نمره" min="1" max="100">
+                        </li>
+
+                        <li class="setting-item py-0 p-3 w-30p">
+                            <span class="flex-1">
+                                ریبین کهنه پوشی
+                            </span>
+                            <input type="number" class="input-norm w-28" placeholder="نمره" min="1" max="100">
+                        </li>  
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ====================================== Time Table ======================================== -->
+            <section class="big-section">
+                <div class="section-title">
+                    <p>
+                        کلیه ی ساعت هایی که روی برنامه به رنگ سبز هستند را می توانید در بالا انتخاب کنید. نگران انتخاب
+                        گزینه های قرمز نباشید چون از انتخاب های بالا حذف شده اند
+                    </p>
+                </div>
+
+                <div class="section-content">
+                    <table class="timetable timetable-select w-full">
+                        <tr>
+                            <th>روز/ساعت</th>
+                            <th>8:00 <sub>A.M</sub> - 9:30 <sub>A.M</sub></th>
+                            <th>10:00 <sub>A.M</sub> - 11:30 <sub>A.M</sub></th>
+                            <th>2:00 <sub>P.M</sub> - 3:30 <sub>P.M</sub></th>
+                            <th>4:00 <sub>P.M</sub> - 5:30 <sub>P.M</sub></th>
+                            <th>6:00 <sub>P.M</sub> - 7:30 <sub>P.M</sub></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                شنبه
+                            </td>
+                            <td>
+                                <div>
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td class="error">
+                                <div>
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                101
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class=" timetable-item">
+                                        <p>Four Corners 1</p>
+                                        <div>
+                                            <span>
+                                                سیوان قانعی فرد
+                                            </span>
+                                            <span>
+                                                مجازی
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                یکشنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                دوشنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                سه شنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                چهارشنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                پنج شنبه
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- =======================================================================================
+ FOOTER
+============================================================================================
+-->
+            <footer>
+                <p>
+                    تمامی حقوق متعلق به زانست می باشد
+                </p>
+                <div class="text-center md:text-right">
+                    <span class="ml-4">
+                        ترم تحصیلی
+                    </span>
+                    <select name="semester" class="px-3 text-center py-1 rounded-md" id="semeseter">
+                        <option value="#">بهار 98-99</option>
+                        <option value="#">تابستان 98-99</option>
+                        <option value="#">پاییز 78-98</option>
+                    </select>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+</body>
+
+</html>
