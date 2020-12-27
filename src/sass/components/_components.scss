@@ -169,10 +169,11 @@ footer {
 
 // ===================== FULL EDIT BOX
 .full-edit-box {
-    @apply p-5 flex flex-row flex-wrap mb-4 h-28 justify-start items-center;
+    @apply p-5 flex flex-row flex-wrap mb-4 justify-start items-center;
     > div {
-        @apply flex flex-row flex-wrap h-full;
+        @apply flex flex-row flex-wrap h-full mb-10;
         flex: 0 1 calc(100% / 6);
+        height: 5rem;
         span {
             @apply flex-fullrow text-gray-600 text-sm mb-2;
         }
@@ -181,8 +182,15 @@ footer {
             @apply h-full w-full p-2 rounded-sm border-red-300 border-2;
         }
 
-        .accepted {
-            @apply border-green-400;
+        &.accepted {
+            input, select {
+                @apply border-green-400;
+            }
+        }
+
+        .input-group {
+            @apply h-full w-full;
+            height: 5rem;
         }
     }
 }
@@ -260,7 +268,7 @@ footer {
 
 // ================== BIG SECTION
 .big-section {
-    @apply w-full bg-gray-100 text-right px-10 py-5 mb-16;
+    @apply w-full bg-gray-100 text-right px-10 py-10 mb-16;
     .section-title {
         @apply mb-8;
         h2 {
@@ -292,6 +300,58 @@ footer {
 }
 
 
+// ======================================================================================================
+// TABLE NORM   
+// ======================================================================================================
+.table-norm {
+    @apply w-full text-center border-4 border-pink-700;
+    .header {
+        @apply bg-pink-700 text-white;
+    }
+
+    tr:not(.header) {
+        @apply border-b-2 border-blue-200;
+
+        &:nth-child(1n+0) {
+            @apply bg-green-300;
+        }
+
+        &:nth-child(2n+0) {
+            @apply bg-white;
+        }
+    }
+
+    td, th {
+        @apply p-4;
+    }
+
+    td {
+        @apply border-l-2 border-blue-200;
+    }
+
+    th {
+        @apply font-bold;
+    }
+}
+
+
+// pagination
+.pagination {
+    ul {
+        @apply w-full flex flex-row flex-nowrap justify-end items-center;
+        li {
+            @apply p-4 bg-pink-700 text-white rounded-sm h-14 ml-3 px-5 hover:bg-pink-900;
+
+            &.active {
+                @apply bg-pink-200 text-black;
+            }
+
+            &.dots {
+                @apply bg-opacity-0 text-black text-2xl;
+            }
+        }
+    }
+}
 
 // ======================================================================================================
 // TIME TABLE
