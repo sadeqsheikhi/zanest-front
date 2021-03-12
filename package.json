@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "set NODE_ENV=production && webpack",
+    "build": "webpack --mode production",
     "start": "webpack serve --mode development --open chrome"
   },
   "author": "Sadeq Sheikhi",
@@ -31,7 +31,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "core-js": "^3.6.5",
-    "jquery": "^3.5.1",
     "tailwindcss": "^2.0.2"
   },
   "browserslist": [

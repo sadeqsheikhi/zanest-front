@@ -14,8 +14,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
         entry: "./src/js/app.js",
         // where the main js file should go
         output: {
-            path: path.resolve(__dirname, 'dist'),
-            filename: "js/bundle.js"
+            path: path.resolve('A:\\zanest_electron\\renderer'),
+            filename: "\\js\\app.js"
         },
 
         target: "web",
@@ -26,93 +26,94 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             new HtmlWebpackPlugin({
                 filename: "dashboard.html",
                 template: "./src/dashboard.html",
-                inject: "body",
-                minify: {
-                    collapseWhiteSpace: true,
-                    collapseInlineTagWhiteSpace: true,
-                    minifyCSS: true,
-                    minifyJS: true,
-                    minifyURLs:true,
-                    removeComments: true,
-                }
+                inject: false,
+                minify: true
             }),
 
             new HtmlWebpackPlugin({
                 filename: "login.html",
                 template: "./src/login.html",
-                inject: "body",
+                inject: false,
+                minify: true
             }),
             new HtmlWebpackPlugin({
-                filename: "settings_topics.html",
-                template: "./src/settings_topics.html",
-                inject: "body",
+                filename: "about_zanest.html",
+                template: "./src/about_zanest.html",
+                inject: false,
+                minify: true
             }),
-            new HtmlWebpackPlugin({
-                filename: "settings_levels.html",
-                template: "./src/settings_levels.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "settings_semesters.html",
-                template: "./src/settings_semesters.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "settings_times.html",
-                template: "./src/settings_times.html",
-                inject: "body",
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: "settings_topics.html",
+            //     template: "./src/settings_topics.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "settings_levels.html",
+            //     template: "./src/settings_levels.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "settings_semesters.html",
+            //     template: "./src/settings_semesters.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "settings_times.html",
+            //     template: "./src/settings_times.html",
+            //     inject: "body",
+            // }),
+            //
+            // new HtmlWebpackPlugin({
+            //     filename: "settings_inst.html",
+            //     template: "./src/settings_inst.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "users.html",
+            //     template: "./src/users.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "classes.html",
+            //     template: "./src/classes.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "classes_add.html",
+            //     template: "./src/classes_add.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "classes_search.html",
+            //     template: "./src/classes_search.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "classes_edit.html",
+            //     template: "./src/classes_edit.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "students.html",
+            //     template: "./src/students.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "students_edit.html",
+            //     template: "./src/students_edit.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "teachers.html",
+            //     template: "./src/teachers.html",
+            //     inject: "body",
+            // }),
+            // new HtmlWebpackPlugin({
+            //     filename: "teachers_edit.html",
+            //     template: "./src/teachers_edit.html",
+            //     inject: "body",
+            // }),
 
-            new HtmlWebpackPlugin({
-                filename: "settings_inst.html",
-                template: "./src/settings_inst.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "users.html",
-                template: "./src/users.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "classes.html",
-                template: "./src/classes.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "classes_add.html",
-                template: "./src/classes_add.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "classes_search.html",
-                template: "./src/classes_search.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "classes_edit.html",
-                template: "./src/classes_edit.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "students.html",
-                template: "./src/students.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "students_edit.html",
-                template: "./src/students_edit.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "teachers.html",
-                template: "./src/teachers.html",
-                inject: "body",
-            }),
-            new HtmlWebpackPlugin({
-                filename: "teachers_edit.html",
-                template: "./src/teachers_edit.html",
-                inject: "body",
-            }),
             // If you wanna add more files, just add another HtmlWebpackPlugin object(like above)
             // and associate it's options to the file that you want
         ],
@@ -150,12 +151,19 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
                 // first reads through scss files through sass-loader
                 // then processes them using postcss and autoprefixer inside of that
-                // then css files get handles by css loader and style loader attaches them to the js
+                // then css files get handled by css loader and style loader attaches them to the js
                 {
                     test: /\.scss$/,
                     use: [
-                        'style-loader',
-                        'css-loader',
+                        {
+                            loader: "file-loader",
+                            options: {
+                                name: '[name].css',
+                                outputPath: './styles'
+                            }
+                        },
+                        // 'style-loader',
+                        // 'css-loader',
                         'postcss-loader',
                         'sass-loader'
                     ]
