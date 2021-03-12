@@ -1,168 +1,201 @@
 @layer utilities {
 
 
-// POSITIONING
-.u-center-v {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
+  // POSITIONING
+  .u-center-v {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
 
-.u-center-h {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  .u-center-h {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-.u-center-both {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 50%);
-}
+  .u-center-both {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+  }
 
-.top-95  {
-  top: 95%;
-}
+  .top-95 {
+    top: 95%;
+  }
 
-// BORDER-RADIUS
-.rounded-25 {
-  border-radius: 25px;
-}
-
-// PADDING UTILITIES
-.padding-3 {
-  padding: 3rem;
-}
-
-.padding-2 {
-  padding: 2rem;
-}
-
-.pt-10v {
-  padding-top: 10vh;
-}
-
-// FLEX BOX PROPERTIES
-.flex-40 {
-  flex: 0 1 40%;
-}
-
-.flex-50 {
-  flex: 0 1 50%;
-}
+  // BORDER-RADIUS
+  .rounded-25 {
+    border-radius: 25px;
+  }
 
 
-.flex-fullrow {
-  flex: 1 1 100%;
+  // PADDING UTILITIES
+  .padding-3 {
+    padding: 3rem;
+  }
+
+  .padding-2 {
+    padding: 2rem;
+  }
+
+  .pt-10v {
+    padding-top: 10vh;
+  }
+
+  // FLEX BOX PROPERTIES
+  .flex-40 {
+    flex: 0 1 40%;
+  }
+
+  .flex-50 {
+    flex: 0 1 50%;
+  }
+
+
+  .flex-fullrow {
+    flex: 1 1 100%;
+  }
+
+
+  // HEIGHT OR WEIGHT
+  .h-inherit {
+    height: inherit;
+  }
+
+  .h-initial {
+    height: initial;
+  }
+
+  .h-18 {
+    height: 4.5rem;
+  }
+
+  .h-8v {
+    height: 8vh;
+  }
+
+  .h-10v {
+    height: 10vh;
+  }
+
+  .h-10v {
+    height: 10vh;
+  }
+
+  .h-15v {
+    height: 15vh;
+  }
+
+  .h-20v {
+    height: 20vh;
+  }
+
+  .h-30v {
+    height: 30vh;
+  }
+
+  .h-40v {
+    height: 40vh;
+  }
+
+  .h-50v {
+    height: 50vh;
+  }
+
+  .h-60v {
+    height: 60vh;
+  }
+
+  .h-70v {
+    height: 70vh;
+  }
+
+  .h-80v {
+    height: 80vh;
+  }
+
+  .h-90v {
+    height: 90vh;
+  }
+
+  .h-92v {
+    height: 92vh;
+  }
+
+  .h-95v {
+    height: 95vh;
+  }
+
+  .w-15v {
+    width: 15vw;
+  }
+
+  .w-30p {
+    width: 30%;
+  }
+
+  .w-45p {
+    width: 45%;
+  }
+
+  .w-46p {
+    width: 46%;
+  }
+
+  .w-47p {
+    width: 47%;
+  }
+
+  .w-48p {
+    width: 48%;
+  }
+
+  // TEXT BASED CLASSES AND UTILITIES
+  .ltr {
+    direction: ltr;
+  }
+
+  .rtl {
+    direction: rtl;
+  }
+
+  .text-shadow {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .6);
+  }
+
+
+  // border-classes
+  .border-danger {
+    @apply border-2 border-red-300;
+  }
+
+  .border-success {
+    @apply border-2 border-green-500;
+  }
+
+
+  // @LAYER
+}
+
+// transitions
+.transition-all-half {
+  transition: all ease .5s;
+}
+
+.transition-all-1 {
+  transition: all ease 1s;
+}
+
+.transition-all-2 {
+  transition: all ease 2s;
 }
 
 
-// HEIGHT OR WEIGHT
-.h-inherit {
-  height: inherit;
+// ======================================================================
+// typography utilities
+.font-mono {
+  font-family: monospace;
 }
-
-.h-initial {
-  height: initial;
-}
-
-.h-18 {
-  height: 4.5rem;
-}
-
-.h-8v {
-  height: 8vh;
-}
-
-.h-10v {
-  height: 10vh;
-}
-.h-10v {
-  height: 10vh;
-}
-.h-15v {
-  height: 15vh;
-}
-.h-20v {
-  height: 20vh;
-}
-.h-30v {
-  height: 30vh;
-}
-.h-40v {
-  height: 40vh;
-}
-.h-50v {
-  height: 50vh;
-}
-.h-60v {
-  height: 60vh;
-}
-.h-70v {
-  height:70vh;
-}
-.h-80v {
-  height:80vh;
-}
-.h-90v {
-  height:90vh;
-}
-.h-92v {
-  height:92vh;
-}
-.h-95v {
-  height:95vh;
-}
-
-.w-15v {
-  width: 15vw;
-}
-
-.w-30p {
-  width: 30%;
-}
-
-.w-45p {
-  width: 45%;
-}
-.w-46p {
-  width: 46%;
-}
-.w-47p {
-  width: 47%;
-}
-.w-48p {
-  width: 48%;
-}
-
-// TEXT BASED CLASSES AND UTILITIES
-.ltr {
-  direction: ltr;
-}
-
-.rtl {
-  direction: rtl;
-}
-
-.text-shadow {
-  text-shadow: 0 3px 6px rgba(0,0,0,.6);
-}
-
-  
-// border-classes
-.border-danger {
-  @apply border-2 border-red-300;
-}
-
-.border-success {
-  @apply border-2 border-green-500;
-}
-
- 
-
-
-// @LAYER
-}
-

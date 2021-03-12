@@ -1,0 +1,11 @@
+.password-validator {
+  @apply text-sm flex flex-row justify-between flex-wrap items-center p-4;
+  li {
+    flex-basis: 40%;
+    @apply mb-2 text-gray-400;
+
+    &.valid {
+      @apply text-green-700;
+    }
+  }
+}

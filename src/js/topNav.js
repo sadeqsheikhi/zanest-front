@@ -21,10 +21,4 @@ hamburgerButton.addEventListener('click', function() {
     console.log('hey')
 })
 
-
-
-
-
-
-
 })()

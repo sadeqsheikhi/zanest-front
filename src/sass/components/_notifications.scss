@@ -1,0 +1,56 @@
+.notification {
+  @apply absolute top-2 bg-gray-200 rounded-lg p-4 pl-10;
+  text-align: right;
+  right: 50%;
+  transform: translateX(+50%);
+  background: white;
+  max-width: 80%;
+
+  &.not-error {
+    border: 1px solid #ff3131;
+
+    .not-header {
+      color: #b00000;
+    }
+
+    .not-body {
+      font-family: monospace;
+      padding: 0.5rem;
+      background: #333333;
+      color: white;
+    }
+  }
+
+
+  &.not-success {
+    border: 1px solid #13ff13;
+    .not-header {
+      color: #016301;
+    }
+  }
+
+
+  .not-close {
+    @apply absolute left-4 top-4 p-1;
+    color: #744e4e;
+
+    &:hover {
+      color: #ff3131;
+      cursor: pointer;
+    }
+  }
+
+
+  .not-header {
+    @apply text-lg font-bold;
+  }
+
+  .not-body {
+    padding: 0.5rem;
+    @apply my-2 rounded-sm
+  }
+
+  .not-footer {
+    color: #333333;
+  }
+}
