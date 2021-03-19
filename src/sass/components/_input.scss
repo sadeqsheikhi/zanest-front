@@ -1,0 +1,37 @@
+input.success {
+  border-bottom: solid 3px;
+  @apply border-green-500;
+}
+
+input.fail {
+  border-bottom: solid 3px;
+  @apply border-rose-500;
+}
+
+.input-guide {
+  @apply text-sm text-gray-500 p-2;
+}
+
+.input-error {
+  @apply bg-rose-200 text-rose-900 text-sm p-2 rounded-md mt-1;
+}
+
+.progress {
+  transition: width ease 0.5s;
+  transform: translateZ(0);
+
+  &.w-1\/4 {
+  @apply bg-red-500
+}
+
+  &.w-1\/2 {
+  @apply bg-orange-500
+}
+
+  &.w-3\/4 {
+    @apply bg-yellow-500;
+  }
+  &.w-full {
+    @apply bg-green-500;
+  }
+}

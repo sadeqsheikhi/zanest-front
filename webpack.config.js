@@ -14,7 +14,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
         entry: "./src/js/app.js",
         // where the main js file should go
         output: {
-            path: path.resolve('A:\\zanest_electron\\renderer'),
+            path: path.resolve('./../renderer/'),
             filename: "\\js\\app.js"
         },
 
@@ -33,6 +33,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             new HtmlWebpackPlugin({
                 filename: "login.html",
                 template: "./src/login.html",
+                inject: false,
+                minify: true
+            }),
+            new HtmlWebpackPlugin({
+                filename: "firstLogin.html",
+                template: "./src/firstLogin.html",
                 inject: false,
                 minify: true
             }),
