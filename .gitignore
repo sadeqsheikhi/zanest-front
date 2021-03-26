@@ -4,4 +4,4 @@ dist/
 package-lock.json
 .vscode/tasks.json
 debug.log
-static/
+

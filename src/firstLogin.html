@@ -33,15 +33,19 @@
                 حساب کاربری مدیر را بسازید:
             </div>
 
+            <div class="mb-2">
+                <input type="text" class="p-4 form-control" :class="{fail: fullname.err}" placeholder="نام شما" v-model="fullname.value" max="50" v-on:input="processFullname">
+                <p class="input-error" v-if="fullnameErr.seen">{{fullnameErr.text}}</p>
+            </div>
             <div class="mb-4">
                 <input  v-bind:class="{fail: username.err}" type="text" class="p-4 form-control"
                         placeholder="نام کاربری" v-on:input="processUsername" v-model="username.value" max="50">
-                <p class="input-error" v-if="usernameErr.seen" id="username-err">{{usernameErr.text}}</p>
+                <p class="input-error" v-if="usernameErr.seen">{{usernameErr.text}}</p>
                 <p class="input-guide">نام کاربری می تواند شامل حروف انگلیسی، اعداد و _ باشد.</p>
             </div>
 
             <!-- Progress Bar -->
-            <div class="h-4 relative max-w-xl rounded-full overflow-hidden mb-2" id="pass-bar-holder" v-if="progress.seen">
+            <div class="h-4 relative max-w-xl rounded-full overflow-hidden mb-2" v-if="progress.seen">
                 <div class="w-full h-full bg-gray-200 absolute"></div>
                 <div id="pass-bar" class="progress h-full relative text-right text-white pr-4" style="font-size: 12px" v-bind:class="progress.width">
                     {{ progress.text }}
