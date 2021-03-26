@@ -24,29 +24,25 @@
 
     <div class="flex flex-col justify-between items-center text-black order-1 mb-5 sm:w-full lg:w-1/2 md:justify-start">
 
-        <div class="login-box rounded-lg bg-gray-100 bg-opacity-90 p-8 sm:w-3/4">
+        <div class="login-box rounded-lg bg-gray-100 bg-opacity-90 p-8 sm:w-3/4" id="loginBox">
             <div class="logo mb-5 flex-row justify-center flex">
                 <img class="h-20" src="media/logofull.png" alt="لوگوی زانست">
             </div>
 
             <div class="mb-4 relative">
-                <label for="login-username" class="hidden">نام کاربری</label>
-                <input class="p-4" type="text" class="form-control" required name="username" id="login-username"
-                       aria-describedby="helpId" placeholder="نام کاربری" maxlength="50">
-                <div class="form-error" id="error1">{{ error }}</div>
+                <input  v-bind:class="{fail: username.err}"  type="text" class="form-control p-4"
+                       placeholder="نام کاربری" maxlength="50" v-model="username.value">
+                <p class="input-error" v-if="usernameErr.seen">{{ usernameErr.text }}</p>
             </div>
             <div class="relative">
-                <label class="hidden" for="login-pass">رمزعبور</label>
-                <input class="p-4" type="password" class="form-control" required name="_password.scss" id="login-pass"
-                       aria-describedby="helpId" min="8" placeholder="رمز عبور" maxlength="50">
-                <div class="form-error" id="error2">{{ error }}</div>
+                <input :class="{fail: password.err}" v-model="password.value" class="p-4 form-control" type="password" min="8" placeholder="رمز عبور">
+                <p class="input-error" v-if="passwordErr.seen">{{ passwordErr.text }}</p>
             </div>
 
             <div class="mt-10 flex flex-row flex-wrap justify-center items-center">
                 <button type="submit"
                         class="btn btn-primary text-base transition-all-half scale-100 mb-2 hover:bg-opacity-90"
-                        id="login-button">
-                    ورود به پنل
+                v-html="submitButton.text" v-on:click="submitForm">
                 </button>
             </div>
 

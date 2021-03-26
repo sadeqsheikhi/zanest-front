@@ -24,7 +24,7 @@
 
     <div class="flex flex-col justify-between items-center text-black order-1 mb-5 sm:w-full lg:w-1/2 md:justify-start">
 
-        <div class="login-box rounded-lg bg-gray-100 bg-opacity-90 p-8 sm:w-3/4 text-right">
+        <div class="login-box rounded-lg bg-gray-100 bg-opacity-90 p-8 sm:w-3/4 text-right" id="signup-box">
             <div class="logo mb-5 flex-row justify-center flex">
                 <img class="h-20" src="media/logofull.png" alt="لوگوی زانست">
             </div>
@@ -34,47 +34,34 @@
             </div>
 
             <div class="mb-4">
-                <input class="p-4 fail" type="text" class="form-control" name="username" id="sign-username"
-                       aria-describedby="helpId" placeholder="نام کاربری">
-                <p class="input-error">نام کاربری نمی تواند خالی باشد</p>
+                <input  v-bind:class="{fail: username.err}" type="text" class="p-4 form-control"
+                        placeholder="نام کاربری" v-on:input="processUsername" v-model="username.value" max="50">
+                <p class="input-error" v-if="usernameErr.seen" id="username-err">{{usernameErr.text}}</p>
                 <p class="input-guide">نام کاربری می تواند شامل حروف انگلیسی، اعداد و _ باشد.</p>
             </div>
 
             <!-- Progress Bar -->
-            <div class="h-3 relative max-w-xl rounded-full overflow-hidden mb-2">
+            <div class="h-4 relative max-w-xl rounded-full overflow-hidden mb-2" id="pass-bar-holder" v-if="progress.seen">
                 <div class="w-full h-full bg-gray-200 absolute"></div>
-                <div id="pass-bar" class="progress h-full relative w-1/4"></div>
+                <div id="pass-bar" class="progress h-full relative text-right text-white pr-4" style="font-size: 12px" v-bind:class="progress.width">
+                    {{ progress.text }}
+                </div>
             </div>
             <div class="mb-2">
-                <input class="p-4" type="password" class="form-control" name="password" id="sign-pass"
-                       aria-describedby="helpId" placeholder="رمز عبور">
+                <input type="password" class="p-4 form-control"
+                        placeholder="رمز عبور" v-on:input="processPassword" v-model="password.value">
             </div>
 
             <div>
-                <input class="p-4" type="password" class="form-control" name="password" id="sign-pass-repeat"
-                       aria-describedby="helpId" placeholder="تکرار رمز عبور">
-                <div class="input-guide">پسورد شما باید شرایط زیر را داشته باشد:
-                    <br>
-                <div class="flex flex-row justify-between my-2 mb-6">
-                <span class="inline-block mr-2" id="check-8">
-                     <i class="fa fa-check-circle"></i>
-                     حداقل 8 کاراکتر
-                 </span>
-                    <span class="inline-block text-green-600 mr-2" id="check-letter">
-                    <i class="fa fa-check-circle"></i>
-                    حروف بزرگ و کوچک
-                </span>
-                    <span class="inline-block mr-2" id="check-digit">
-                    <i class="fa fa-check-circle"></i>
-                    حداقل یک عدد
-                </span>
-                </div>
-                </div>
+                <input :class="{fail: passwordRepeat.err}" type="password" class="p-4 form-control"
+                       placeholder="تکرار رمز عبور" v-model="passwordRepeat.value" v-on:change="processPassRep">
+                <p class="input-error" v-if="passwordRepeatErr.seen" id="pass-err">{{passwordRepeatErr.text}}</p>
+                <p class="input-guide">رمز عبور شما باید حداقل 8 کاراکتر باشد</p>
             </div>
 
 
-            <div class="text-right">
-                    <button class="btn btn-primary text-base mb-2" id="register">ایجاد حساب کاربری</button>
+            <div class="text-right mt-4">
+                    <button class="btn btn-primary text-base transition-all-half scale-100 mb-2 hover:bg-opacity-90" v-on:click="submitForm" v-html="submitButton.text"></button>
             </div>
         </div>
     </div>
