@@ -17,8 +17,30 @@
     @apply relative;
 }
 
+#secondary-menu.w-16 {
+    @apply border-l-2
+}
+
 .side-nav-li {
     @apply flex h-14 px-4 justify-between w-full border-b-2 border-white items-center hover:bg-pink-900 bg-opacity-70;
+    &.closed {
+        @apply justify-center;
+        .second-nav-text {
+            display: none;
+            opacity: 0;
+        }
+    }
+    &.closed:hover {
+        .second-nav-text {
+            display: inline-block;
+            opacity: 1;
+        }
+        @apply w-56;
+        margin-right: 10rem;
+        justify-content: space-between;
+        right: 0;
+
+    }
 }
 
 
