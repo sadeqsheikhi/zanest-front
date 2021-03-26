@@ -9,11 +9,11 @@ input.fail {
 }
 
 .input-guide {
-  @apply text-sm text-gray-500 p-2;
+  @apply text-sm text-right text-gray-500 p-2;
 }
 
 .input-error {
-  @apply bg-rose-200 text-rose-900 text-sm p-2 rounded-md mt-1;
+  @apply bg-rose-200 text-right text-rose-900 text-sm p-2 rounded-md mt-1;
 }
 
 .progress {
