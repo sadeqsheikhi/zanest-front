@@ -1,3 +1,3 @@
-#Front End Project Starter
-## Implementing babel, webpack, sass, autoprefixer
-###Sadeq Sheikhi
+# zanest frontend static pages
+### this is a sub repo of this project
+https://github.com/ZanestIO/zanest-desktop
