@@ -181,6 +181,12 @@
 }
 
 // transitions
+.transition-all-02 {
+  transition: all ease .2s;
+}
+.transition-all-03 {
+  transition: all ease .3s;
+}
 .transition-all-half {
   transition: all ease .5s;
 }
