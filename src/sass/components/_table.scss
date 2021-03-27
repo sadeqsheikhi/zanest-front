@@ -1,0 +1,69 @@
+// ======================================================================================================
+// TABLE NORM
+// ======================================================================================================
+.table-holder {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.table-norm {
+  @apply w-max text-center;
+  border-collapse: separate;
+  -webkit-border-vertical-spacing: 10px;
+  -webkit-border-horizontal-spacing: 0;
+
+  tbody, thead {
+    @apply rounded-2xl;
+  }
+
+  tr {
+    transition: all ease .1s;
+    th ,td {
+      &:first-child {
+        border-radius: 0 15px 15px 0;
+      }
+
+      &:last-child {
+        border-radius: 15px 0 0 15px;
+        border: none;
+      }
+    }
+  }
+
+  .header {
+    @apply bg-purple-800 text-white rounded-2xl;
+  }
+
+  tr:not(.header) {
+
+    &:hover {
+      @apply bg-gray-800 text-white cursor-pointer;
+      td {
+        @apply bg-gray-800;
+        &.edit {
+          @apply bg-purple-800 cursor-pointer;
+        }
+      }
+    }
+    &:nth-child(1n+0) {
+      @apply bg-fuchsia-300;
+    }
+
+    &:nth-child(2n+0) {
+      @apply bg-white;
+    }
+  }
+
+  td, th {
+    transition: all ease .1s;
+    @apply p-4;
+  }
+
+  td {
+    @apply border-l-2 border-blue-200 mb-2;
+  }
+
+  th {
+    font-weight: normal;
+  }
+}

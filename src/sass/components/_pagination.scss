@@ -1,0 +1,17 @@
+// pagination
+.pagination {
+  ul {
+    @apply w-full flex flex-row flex-nowrap justify-start items-center;
+    li {
+      @apply bg-purple-800 text-white rounded-3xl ml-3 hover:bg-gray-800 w-12 h-12 flex justify-center items-center;
+
+      &.active {
+        @apply bg-pink-200 text-black;
+      }
+
+      &.dots {
+        @apply bg-opacity-0 text-black text-2xl;
+      }
+    }
+  }
+}

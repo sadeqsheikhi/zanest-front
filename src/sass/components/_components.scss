@@ -50,66 +50,15 @@
 // RECURRENT ELEMENTS
 // ======================================================================================================
 main {
-    @apply w-full pb-24 relative text-right flex flex-wrap
+    @apply w-full pb-16 relative text-right flex flex-wrap
     flex-row justify-evenly items-start pt-10v md:pr-56 pt-4 min-h-screen bg-white bg-cover;
     background: url('../media/main-bg.jpg') fixed top left;
     transition: all ease .2s;
 }
 
-// normal input
-.input-norm {
-    @apply p-4 my-2 shadow rounded-md;
-}
-
 footer {
- @apply flex-fullrow justify-between items-center bg-gray-300 flex flex-row flex-nowrap p-3 w-full h-16 absolute bottom-0 left-0 md:pr-64 mt-10;
+    @apply flex-fullrow justify-between items-center bg-gray-300 flex flex-row flex-nowrap p-3 w-full h-16 absolute bottom-0 left-0 md:pr-64 mt-10;
 }
-
-// ============== BUTTONS
-.btn {
-    @apply px-8 py-3 rounded-3xl text-lg focus:outline-none;
-  
-    border: 1px solid transparent;
-    &:focus {
-      border: 1px solid #333333;
-    }
-    &-secondary {
-      @apply  bg-gray-100 bg-opacity-95 text-black;
-    }
-    &-primary {
-  @apply bg-purple-900 text-white;
-    }
-
-    &-success {
-        @apply bg-green-400 p-3 rounded-sm;
-    }
-
-    &-cancel {
-        @apply bg-gray-300 p-3 text-red-600;
-    }
-
-    &-delete {
-        @apply bg-red-300 p-3 rounded-sm;
-    }
-
-    &-small {
-        @apply p-3 rounded-sm flex bg-white text-black flex-row flex-nowrap justify-start items-center;
-        i {
-            @apply ml-3 text-lg;
-        }
-    }
-
-    &-low-profile {
-        @apply rounded-lg p-3 bg-gray-300}
-
-    &-border {
-        @apply border-2 border-black;
-    }
-
-    &-muted {
-        @apply p-3 bg-gray-200 rounded-sm;
-    }
-  }
 
 // ============ SAVE OR CANCEL BUTTONS
 .save-cancel {
@@ -126,129 +75,18 @@ footer {
 .save {
     @apply mt-4;
     button {
-     @apply py-2 px-4 bg-green-600 text-white rounded-sm;
+        @apply py-2 px-4 bg-green-600 text-white rounded-sm;
     }
 }
 
 
 .class-setting-item.open {
-     @apply border-b-0 rounded-b-none bg-white;
-     .connector {
-         @apply h-18 w-full bg-white block;
-     }
-}
-
-
-// ========================= SEARCH AND BUTTONS
-.search-and-button {
-    @apply w-full flex flex-wrap flex-row justify-between px-10 items-start mb-10;
-
-    &.join {
-        @apply mb-0;
-        > button {
-            @apply h-24;
-        }
-        >div {
-            @apply h-initial;
-        }
-    }
-
-    > button {
-        @apply bg-gray-100 p-5 ml-4 rounded-sm h-18;
-    }
-
-    > div {
-        @apply flex-1 bg-gray-100 flex flex-row h-18 rounded-sm relative flex-wrap justify-between items-center;
-
-        div:first-child {
-            @apply flex-fullrow flex flex-row flex-nowrap justify-between items-center;
-        }
-        input, select {
-            @apply p-5 bg-gray-100 rounded-sm h-full;
-        }
-
-        span {
-           @apply text-gray-400 p-5;
-        }
-
-        select {
-            @apply w-36 border-r-2 border-black;
-        }
-    }
-
-    div.search-box {
-        @apply flex-fullrow flex flex-row absolute top-full left-0 bg-white z-20 w-full shadow-2xl flex-wrap;
-        ul {
-            @apply flex-fullrow;
-        }
-        li {
-            @apply flex-fullrow flex cursor-pointer flex-row flex-nowrap hover:bg-pink-300 border-gray-600 border-t-2;
-            span {
-                @apply text-black;
-            }
-            span:last-child {
-                @apply flex-1;
-            }
-        }
-    }
-
-}
-
-// ===================== FULL EDIT BOX
-.full-edit-box {
-    @apply p-5 flex flex-row flex-wrap mb-4 justify-start items-center;
-    > div {
-        @apply flex flex-row flex-wrap h-full mb-10;
-        flex: 0 1 calc(100% / 6);
-        height: 5rem;
-        span {
-            @apply flex-fullrow text-gray-600 text-sm mb-2;
-        }
-
-        input, select {
-            @apply h-full w-full p-2 rounded-sm border-red-300 border-2;
-        }
-
-        &.accepted {
-            input, select {
-                @apply border-green-400;
-            }
-        }
-
-        .input-group {
-            @apply h-full w-full;
-            height: 5rem;
-        }
+    @apply border-b-0 rounded-b-none bg-white;
+    .connector {
+        @apply h-18 w-full bg-white block;
     }
 }
 
-// ===================== TIME SELECT BOX
-.time-select {
-    @apply flex flex-row flex-wrap p-5 items-center justify-start;
-    
-    > h3 {
-        @apply flex-fullrow text-sm font-bold mb-4;
-    }
-
-    >div {
-        @apply flex flex-col items-start flex-1;
-        >div {
-            @apply flex items-center mb-2;
-            span {
-                @apply ml-4 text-lg;
-            }
-            i {
-                @apply text-xl;
-            }
-        }
-
-        select {
-            @apply p-2 border-danger;
-        }
-    }
-
-
-}
 // ======================================================================================================
 // DASHBOARD
 // ======================================================================================================
@@ -324,60 +162,6 @@ footer {
 
 .setting-item-active {
     @apply  bg-pink-300;
-}
-
-
-// ======================================================================================================
-// TABLE NORM   
-// ======================================================================================================
-.table-norm {
-    @apply w-full text-center border-4 border-pink-700;
-    .header {
-        @apply bg-pink-700 text-white;
-    }
-
-    tr:not(.header) {
-        @apply border-b-2 border-blue-200;
-
-        &:nth-child(1n+0) {
-            @apply bg-green-300;
-        }
-
-        &:nth-child(2n+0) {
-            @apply bg-white;
-        }
-    }
-
-    td, th {
-        @apply p-4;
-    }
-
-    td {
-        @apply border-l-2 border-blue-200;
-    }
-
-    th {
-        @apply font-bold;
-    }
-}
-
-
-// pagination
-.pagination {
-    ul {
-        @apply w-full flex flex-row flex-nowrap justify-end items-center;
-        li {
-            @apply p-4 bg-pink-700 text-white rounded-sm h-14 ml-3 px-5 hover:bg-pink-900;
-
-            &.active {
-                @apply bg-pink-200 text-black;
-            }
-
-            &.dots {
-                @apply bg-opacity-0 text-black text-2xl;
-            }
-        }
-    }
 }
 
 // ======================================================================================================

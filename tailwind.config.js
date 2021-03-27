@@ -14,15 +14,18 @@ module.exports = {
     colors: {
       black: '#242424',
       purple: colors.purple,
+      fuchsia: colors.fuchsia,
       pink: colors.pink,
       gray: colors.blueGray,
       green: colors.green,
       red: colors.red,
       blue: colors.blue,
+      cyan: colors.cyan,
       yellow: colors.yellow,
       lime: colors.lime,
       orange: colors.orange,
       rose: colors.rose,
+      teal: colors.teal,
       white: '#fff'
     },
     extend: {},

@@ -1,0 +1,59 @@
+// ========================= SEARCH AND BUTTONS
+.search-and-button {
+@apply w-full flex flex-wrap flex-row justify-between px-10 items-start mb-10;
+
+  &.join {
+  @apply mb-0;
+    > button {
+    @apply h-24;
+      border-radius: 15px 15px 0 0;
+  }
+    >div {
+    @apply h-initial;
+  }
+}
+
+  > button {
+  @apply bg-gray-100 p-5 ml-4 rounded-2xl h-18;
+}
+
+  > div {
+  @apply flex-1 bg-gray-100 flex flex-row h-18 rounded-2xl relative flex-wrap justify-between items-center;
+
+    div:first-child {
+    @apply flex-fullrow flex flex-row flex-nowrap justify-between items-center rounded-2xl;
+  }
+    input, select {
+    @apply p-5 bg-gray-100 rounded-2xl h-full;
+  }
+
+    span {
+    @apply text-gray-400 p-2 border-r-2 border-gray-500 text-left;
+  }
+
+    select {
+    @apply w-28 rounded-2xl text-right ml-3 p-2;
+      option {
+      @apply  text-right
+    }
+  }
+}
+
+  div.search-box {
+  @apply flex-fullrow flex flex-row absolute top-full left-0 bg-white z-20 w-full shadow-2xl flex-wrap;
+    ul {
+    @apply flex-fullrow;
+  }
+    li {
+    @apply flex-fullrow flex cursor-pointer flex-row flex-nowrap hover:bg-pink-300 border-gray-600 border-t-2;
+      span {
+      @apply text-black;
+    }
+      span:last-child {
+      @apply flex-1;
+    }
+  }
+}
+
+}
+

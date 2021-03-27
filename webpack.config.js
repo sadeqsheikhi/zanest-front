@@ -54,6 +54,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                 inject: false,
                 minify: true
             }),
+            new HtmlWebpackPlugin({
+                filename: "students_edit.html",
+                template: "./src/students_edit.html",
+                inject: false,
+                minify: true
+            }),
             // new HtmlWebpackPlugin({
             //     filename: "classes_add.html",
             //     template: "./src/classes_add.html",
@@ -105,16 +111,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             // new HtmlWebpackPlugin({
             //     filename: "classes_edit.html",
             //     template: "./src/classes_edit.html",
-            //     inject: "body",
-            // }),
-            // new HtmlWebpackPlugin({
-            //     filename: "students.html",
-            //     template: "./src/students.html",
-            //     inject: "body",
-            // }),
-            // new HtmlWebpackPlugin({
-            //     filename: "students_edit.html",
-            //     template: "./src/students_edit.html",
             //     inject: "body",
             // }),
             // new HtmlWebpackPlugin({

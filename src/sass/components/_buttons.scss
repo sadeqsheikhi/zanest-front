@@ -1,0 +1,67 @@
+
+// ============== BUTTONS
+.btn {
+  @apply p-2 rounded-md text-lg focus:outline-none;
+
+  border: 2px solid transparent;
+  opacity: .9;
+  &:focus {
+    border: 2px solid #f89037;
+    opacity: 1;
+  }
+  &:hover {
+    opacity: 1;
+  }
+
+
+  // ===========================================
+  // Different Sizes
+  &-big {
+    @apply py-4 px-8;
+    border-radius: 500px;
+  }
+
+  &-mid {
+    @apply py-3 px-6;
+    border-radius: 15px;
+  }
+
+  &-small {
+    @apply py-2 px-4;
+    font-size: 16px;
+    border-radius: 15px;
+  }
+
+  // ==========================================
+  // different styles
+  &-primary {
+    @apply bg-purple-900 text-white;
+  }
+
+  &-secondary {
+    @apply  bg-gray-100 bg-opacity-95 text-black;
+  }
+
+  &-success {
+    @apply bg-green-600 text-white;
+  }
+
+  &-cancel {
+    @apply bg-gray-300 text-gray-600;
+  }
+
+  &-delete {
+    @apply bg-red-300;
+  }
+
+  &-low-profile {
+    @apply rounded-lg p-3 bg-gray-300}
+
+  &-border {
+    @apply border-2 border-black;
+  }
+
+  &-muted {
+    @apply bg-gray-200;
+  }
+}
