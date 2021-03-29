@@ -1,59 +1,128 @@
 // ========================= SEARCH AND BUTTONS
 .search-and-button {
-@apply w-full flex flex-wrap flex-row justify-between px-10 items-start mb-10;
+  @apply w-full flex flex-wrap flex-row justify-between px-10 items-start mb-10;
 
   &.join {
-  @apply mb-0;
+    @apply mb-0;
     > button {
-    @apply h-24;
+      @apply h-24;
       border-radius: 15px 15px 0 0;
+    }
+
+    > div {
+      @apply h-initial;
+    }
   }
-    >div {
-    @apply h-initial;
-  }
-}
 
   > button {
-  @apply bg-gray-100 p-5 ml-4 rounded-2xl h-18;
-}
-
-  > div {
-  @apply flex-1 bg-gray-100 flex flex-row h-18 rounded-2xl relative flex-wrap justify-between items-center;
-
-    div:first-child {
-    @apply flex-fullrow flex flex-row flex-nowrap justify-between items-center rounded-2xl;
-  }
-    input, select {
-    @apply p-5 bg-gray-100 rounded-2xl h-full;
+    @apply bg-gray-100 p-5 ml-4 rounded-2xl h-18;
   }
 
-    span {
-    @apply text-gray-400 p-2 border-r-2 border-gray-500 text-left;
-  }
 
-    select {
-    @apply w-28 rounded-2xl text-right ml-3 p-2;
-      option {
-      @apply  text-right
+  // ==============================================================================
+  // SEARCH
+  .search-box {
+    @apply flex-1 bg-gray-100 flex flex-row h-18 rounded-2xl relative flex-wrap justify-between items-center;
+
+    // ==============================================
+    // when search is active and open
+    &.open {
+      z-index: 2000;
+      border-radius: 15px 15px 0 0;
+      .search-field, .search-field input, .search-field select {
+        border-radius: 15px 15px 0 0;
+      }
+
+      .search-result {
+        display: block !important;
+      }
     }
-  }
-}
 
-  div.search-box {
-  @apply flex-fullrow flex flex-row absolute top-full left-0 bg-white z-20 w-full shadow-2xl flex-wrap;
-    ul {
-    @apply flex-fullrow;
-  }
-    li {
-    @apply flex-fullrow flex cursor-pointer flex-row flex-nowrap hover:bg-pink-300 border-gray-600 border-t-2;
+    // ==============================================
+    .search-field {
+      @apply flex-fullrow flex flex-row flex-nowrap justify-between items-center rounded-2xl;
+
+      input, select {
+        @apply p-5 bg-gray-100 rounded-2xl h-full;
+        &:focus {
+          outline: 0;
+      }
+      }
+
       span {
-      @apply text-black;
+        @apply text-gray-400 p-2 border-r-2 border-gray-500 text-left;
+      }
+
+      select {
+        @apply w-28 rounded-2xl text-right ml-3 p-2;
+        option {
+          @apply text-right;
+        }
+      }
     }
-      span:last-child {
-      @apply flex-1;
+
+    // /search field
+
+
+    // ==============================================
+    // search result
+    .search-result {
+      display: none;
+      @apply flex-fullrow flex flex-row absolute top-full left-0 bg-gray-100 w-full shadow-2xl flex-wrap rounded-2xl
+      border-t-2 border-gray-700;
+      border-radius: 0 0 15px 15px;
+
+      ul {
+        @apply flex-fullrow;
+      }
+
+      li {
+        @apply p-4 flex-fullrow flex cursor-pointer flex-row flex-nowrap border-b-2 border-gray-300;
+
+        span {
+          border: none;
+          display: inline-block;
+          @apply text-gray-900;
+          margin-left: 2rem;
+        }
+
+        &:hover {
+          @apply bg-gray-800 text-white;
+          border-color: transparent;
+          transition: all ease .3s;
+
+          &:last-child {
+            border-radius: 0 0 15px 15px;
+          }
+
+          span {
+            @apply text-white
+          }
+        }
+
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
 
+
+// ================================================================================= OVERLAY
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .8);
+  z-index: 1500;
+
+  &.open {
+    display: block;
+  }
 }
 

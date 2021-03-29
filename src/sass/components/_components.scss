@@ -3,6 +3,11 @@
 // ======================================================================================================
 .main-nav {
     @apply w-screen bg-purple-900 text-white flex flex-row flex-nowrap items-center justify-between;
+    z-index: 2001;
+}
+
+nav {
+    z-index: 2001;
 }
 
 .main-dropdown {
@@ -19,7 +24,7 @@
 
 #secondary-menu {
     @apply border-l-2;
-    z-index: 2000;
+    z-index: 2001;
 }
 
 .side-nav-li {
@@ -50,8 +55,7 @@
 // RECURRENT ELEMENTS
 // ======================================================================================================
 main {
-    @apply w-full pb-16 relative text-right flex flex-wrap
-    flex-row justify-evenly items-start pt-10v md:pr-56 pt-4 min-h-screen bg-white bg-cover;
+    @apply w-full pb-16 relative text-right flex flex-wrap flex-row justify-evenly items-start pt-10v md:pr-56 pt-4 min-h-screen bg-white bg-cover;
     background: url('../media/main-bg.jpg') fixed top left;
     transition: all ease .2s;
 }
