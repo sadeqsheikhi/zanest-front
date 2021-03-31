@@ -182,178 +182,54 @@ BODY
             </div>
 
             <div class="section-content">
-                <div class="table-holder">
-                    <table class="table-norm">
-                        <tr class="header">
-                            <th>نام</th>
-                            <th>شماره تماس</th>
-                            <th>جنسیت</th>
-                            <th>کدملی</th>
-                            <th>تاریخ تولد</th>
-                            <th>نام والد</th>
-                            <th>شماره تماس والدین</th>
-                            <th>
-                                آدرس
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>عرفان فلاحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>عرفان فلاحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>عرفان فلاحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>عرفان فلاحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>عرفان فلاحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>عرفان فلاحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>عرفان فلاحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>نسترن فتحی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>کاوه اله بیگی</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-
-                        <tr>
-                            <td>مبینا آریا</td>
-                            <td>09182958875</td>
-                            <td>مرد</td>
-                            <td>38104438568</td>
-                            <td>04 / 05 / 1377</td>
-                            <td>خلیل</td>
-                            <td>09182958875</td>
-                            <td>سنندج، دگران، کوچه بهارستان، پلاک 2</td>
-                        </tr>
-                    </table>
-                </div>
+                <students_table @open-search-result="openEditPage"></students_table>
             </div>
 
-            <div class="mt-5 flex flex-row flex-nowrap justify-between items-center">
-                <div class="pagination flex-1 text-right">
-                    <ul>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                        </li>
+<!--            <div class="mt-5 flex flex-row flex-nowrap justify-between items-center">-->
+<!--                <div class="pagination flex-1 text-right">-->
+<!--                    <ul>-->
+<!--                        <li>-->
+<!--                            <i class="fas fa-chevron-right"></i>-->
+<!--                        </li>-->
 
-                        <li class="acitive">
-                            1
-                        </li>
+<!--                        <li class="acitive">-->
+<!--                            1-->
+<!--                        </li>-->
 
-                        <li>
-                            2
-                        </li>
+<!--                        <li>-->
+<!--                            2-->
+<!--                        </li>-->
 
-                        <li>
-                            3
-                        </li>
+<!--                        <li>-->
+<!--                            3-->
+<!--                        </li>-->
 
-                        <li class="dots">
-                            ...
-                        </li>
+<!--                        <li class="dots">-->
+<!--                            ...-->
+<!--                        </li>-->
 
-                        <li>
-                            18
-                        </li>
+<!--                        <li>-->
+<!--                            18-->
+<!--                        </li>-->
 
-                        <li>
-                            <i class="fas fa-chevron-left"></i>
-                        </li>
-                    </ul>
+<!--                        <li>-->
+<!--                            <i class="fas fa-chevron-left"></i>-->
+<!--                        </li>-->
+<!--                    </ul>-->
 
-                </div>
+<!--                </div>-->
 
 
-                <div class="count-in-page">
-                        <span>
-                            تعداد نمایش در هر صحفه
-                        </span>
-                    <input type="number" class="input-norm w-14 mx-2 p-2" value="10">
-                    <span class="text-xs">
-                            حداکثر 50
-                        </span>
-                </div>
-            </div>
+<!--                <div class="count-in-page">-->
+<!--                        <span>-->
+<!--                            تعداد نمایش در هر صحفه-->
+<!--                        </span>-->
+<!--                    <input type="number" class="input-norm w-14 mx-2 p-2" value="10">-->
+<!--                    <span class="text-xs">-->
+<!--                            حداکثر 50-->
+<!--                        </span>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </section>
 
