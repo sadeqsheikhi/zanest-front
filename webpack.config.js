@@ -1,6 +1,6 @@
 // Enables the working for a path file
 const path = require('path')
-
+// const NodemonPlugin = require('nodemon-webpack-plugin')
 // this package handles all of the html files
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -21,7 +21,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
         target: "web",
 
         plugins: [
-
+            // new NodemonPlugin(),
             // from where to where, and specify minify options(optional and can be false)
             new HtmlWebpackPlugin({
                 filename: "dashboard.html",

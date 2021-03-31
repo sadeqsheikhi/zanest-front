@@ -149,7 +149,8 @@ SECONDARY NAVIGATION
     <!-- =========================================================================================
 START OF THE PAGE
 ==============================================================================================-->
-    <main>
+    <main id="main">
+        <notification @close-notification="closeNot"></notification>
         <div id="overlay"></div>
 
 
@@ -501,6 +502,7 @@ FOOTER
 </script>
 <script>
     require('./js/all.js')
+    require('./js/students.js')
 </script>
 </body>
 </html>

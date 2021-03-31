@@ -1,12 +1,15 @@
 .notification {
-  @apply absolute top-2 bg-gray-200 rounded-lg p-4 pl-10;
+  @apply fixed top-2 bg-gray-200 rounded-2xl p-4 pl-10;
   text-align: right;
+  z-index: 2002;
   right: 50%;
   transform: translateX(+50%);
   background: white;
   max-width: 80%;
+  top: 10%;
+  box-shadow: 0 3px 10px rgba(0,0,0,.5);
 
-  &.not-error {
+  &.error {
     border: 1px solid #ff3131;
 
     .not-header {
@@ -22,11 +25,18 @@
   }
 
 
-  &.not-success {
-    border: 1px solid #13ff13;
-    .not-header {
-      color: #016301;
+  &.success {
+    @apply py-1 bg-green-200 text-black text-center px-10 text-sm;
+    border-radius: 500px;
+    .not-close {
+      display: none;
+      top: 50%;
+      transform: translateY(-50%);
     }
+  }
+
+  &.normal {
+
   }
 
 
