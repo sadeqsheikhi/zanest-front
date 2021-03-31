@@ -2,13 +2,6 @@ input {
   @apply p-3 rounded-md w-full mb-3;
 }
 
-input, select {
-  &.success {
-    @apply  border-b-4 border-rose-500;
-  }
-}
-
-
 // normal input
 .input-norm {
   @apply p-4 my-2 shadow rounded-md;
@@ -17,6 +10,9 @@ input, select {
 
 input, select {
   &.fail {
+    @apply  border-b-4 border-rose-500;
+  }
+  &.success {
     @apply  border-b-4 border-rose-500;
   }
 }
@@ -58,12 +54,11 @@ input, select {
 
 // ===================== FULL EDIT BOX
 .full-edit-box {
-  @apply p-4 flex flex-row flex-wrap justify-start items-center;
+  @apply p-4 flex flex-row flex-wrap justify-start items-start;
 
   > div {
-    @apply flex flex-row flex-wrap h-full mb-12 ml-4;
+    @apply flex flex-row flex-wrap h-full mb-10 ml-4;
     flex: 0 1 calc((100% - (5rem)) / 6);
-    height: 4rem;
 
     &:last-child {
       margin-left: 0;
@@ -74,6 +69,7 @@ input, select {
 
     input, select {
       @apply h-full w-full p-2 rounded-md;
+      height: 4rem;
       border-bottom: 4px solid #8a8a8a;
       box-shadow: 0 0 2px rgba(0,0,0,.5);
     }
@@ -82,19 +78,17 @@ input, select {
       &.fail {
         @apply  border-b-4 border-rose-500;
       }
-    }
 
-
-    &.accepted {
-      input, select {
-        @apply border-green-400;
+      &.success {
+        @apply  border-b-4 border-green-500;
       }
     }
 
     .input-group {
-      @apply h-full w-full flex flex-row flex-nowrap justify-between items-center;
+      @apply h-full w-full flex flex-row flex-nowrap justify-between items-start;
 
-      input {
+      div {
+        @apply h-full;
         margin-left: 1rem;
         &:last-child {
           margin-left: 0;

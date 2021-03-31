@@ -165,83 +165,10 @@ START OF THE PAGE
 BODY
 ==============================================================================================-->
         <!-- create section -->
-        <search_add @open-search-result="openEditPage"></search_add>
+        <search_add @open-search-result="openEditPage" @adding-student="addStudent"></search_add>
+        <add_student @cancel-add="cancelAddStudent"></add_student>
 
-        <section class="big-section">
-            <div class="full-edit-box">
-                <div>
-                        <span>
-                            نام
-                        </span>
-                    <input class="fail" type="text" placeholder="--">
-                </div>
 
-                <div>
-                        <span>
-                            شماره تماس
-                        </span>
-                    <input type="number" placeholder="--">
-                </div>
-
-                <div class="accepted">
-                        <span>
-                         جنسیت
-                        </span>
-                    <select>
-                        <option value="">مرد</option>
-                        <option value="">زن</option>
-                    </select>
-                </div>
-
-                <div>
-                        <span>
-                            کدملی
-                        </span>
-                    <input type="number" placeholder="--">
-                </div>
-
-                <div class="mb-4 w-full flex-1/3">
-                        <span>
-                            تاریخ تولد
-                        </span>
-                    <div class="input-group">
-                        <input type="number" placeholder="روز" min="1" max="31">
-                        <input type="number" placeholder="ماه" min="1" max="12">
-                        <input type="number" placeholder="سال" min="1330" max="1500">
-                    </div>
-                </div>
-
-                <div>
-                        <span>
-                            نام والد
-                        </span>
-                    <input type="text" placeholder="(پدر یا مادر)">
-                </div>
-
-                <div>
-                        <span>
-                            شماره تماس والد
-                        </span>
-                    <input type="number" placeholder="(پدر یا مادر)">
-                </div>
-
-                <div class="flex-1/3">
-                        <span>
-                            آدرس
-                        </span>
-                    <input type="text" placeholder="محل سکونت">
-                </div>
-            </div>
-
-            <div class="px-4 flex items-end">
-                <button class="btn btn-mid btn-primary ml-8">
-                    ایجاد زبان آموز
-                </button>
-                <button class="btn btn-mid btn-cancel">
-                    انصراف
-                </button>
-            </div>
-        </section>
 
         <!-- ====================================== Table ======================================== -->
         <!-- ====================================== Table ======================================== -->
