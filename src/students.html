@@ -164,54 +164,8 @@ START OF THE PAGE
         <!-- =========================================================================================
 BODY
 ==============================================================================================-->
-        <section class="search-and-button">
-            <button class="h-28">
-                <i class="fas fa-plus"></i>
-                زبان آموز جدید
-            </button>
-            <div class="search-box open">
-                <div class="search-field">
-                    <input type="text" placeholder="جست و جو ...">
-                    <i class="fa fa-circle-notch fa-spin inline-block ml-2"></i>
-                    <span>
-                            براساس
-                        </span>
-                    <select name="" id="" class="">
-                        <option value="">نام</option>
-                        <option value="">کدملی</option>
-                    </select>
-                </div>
-
-                <div class="search-result">
-                    <ul>
-                        <li>
-                            <span>
-                                عرفان فلاحی
-                            </span>
-                            <span>
-                                38104495268
-                            </span>
-                            <span>
-                                09182958875
-                            </span>
-                        </li>
-                        <li>
-                            <span>
-                                عرفان فلاحی
-                            </span>
-                            <span>
-                                38104495268
-                            </span>
-                            <span>
-                                09182958875
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <!-- create section -->
+        <search_add @open-search-result="openEditPage"></search_add>
 
         <section class="big-section">
             <div class="full-edit-box">
