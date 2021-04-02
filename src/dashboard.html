@@ -112,45 +112,14 @@ TOP NAVIGATION
 SECONDARY NAVIGATION
 ============================================================================================
 -->
-    <ul id="secondary-menu"
-        class="fixed right-0 bottom-0 hidden z-20 md:flex flex-col justify-start h-92v items-center bg-gradient-to-tr w-56 text-white from-purple-900 to bg-black">
-        <li class="side-nav-li">
-            <span class="second-nav-text">داشبورد</span>
-            <i class="text-lg fas fa-tachometer-alt"></i>
-        </li>
-
-        <li class="side-nav-li">
-            <span class="second-nav-text">کلاس ها</span>
-            <i class="text-lg fas fa-chalkboard"></i>
-        </li>
-
-        <li class="side-nav-li">
-            <span class="second-nav-text">زبان آموزان</span>
-            <i class="text-lg fas fa-users"></i>
-        </li>
-
-        <li class="side-nav-li border-b-0">
-            <span class="second-nav-text">اساتید</span>
-            <i class="text-lg fas fas fas fa-user-tie"></i>
-        </li>
-
-        <div class="flex-1"></div>
-
-        <li class=" side-nav-li">
-            <span class="second-nav-text">تنظیمات</span>
-            <i class="text-lg fas fa-cogs"></i>
-        </li>
-
-        <li class="side-nav-li">
-            <span class="second-nav-text">کاربرها</span>
-            <i class="text-lg fas fa-user-friends"></i>
-        </li>
-    </ul>
+    <div id="menu-holder">
+    <secondary_menu @request-page="requestPage"></secondary_menu>
+    </div>
     <!-- =======================================================================================
 DASHBOARD
 ============================================================================================
 -->
-    <main>
+    <main id="main">
         <section class="main-section w-1/4">
             <div class="section-title">
                 <hr>
