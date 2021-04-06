@@ -9,5 +9,4 @@ import "../media/main-bg.jpg"
 import "../media/wordofday.jpg"
 
 // js files
-import "./topNav"
 // import "./settings"
