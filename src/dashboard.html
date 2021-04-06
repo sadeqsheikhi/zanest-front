@@ -11,12 +11,16 @@
 <body class="font-sans">
 <div id="wrapper">
 
-    <!-- =======================================================================================
+    <div id="menu-holder">
+        <notification @close-notification="closeNot"></notification>
+        <!-- =======================================================================================
         NAVIGATIONS
         =========================================================================================-->
-    <div id="menu-holder">
+
         <primary_menu></primary_menu>
         <secondary_menu @request-page="requestPage"></secondary_menu>
+
+        <footer_el></footer_el>
     </div>
 
     <!-- =======================================================================================
@@ -245,7 +249,7 @@ DASHBOARD
 
         </section>
 
-        <footer></footer>
+        <footer id="footer"></footer>
     </main>
 </div>
 

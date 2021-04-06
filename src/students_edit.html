@@ -12,14 +12,16 @@
 <div id="wrapper">
 
     <div id="menu-holder">
-    <notification @close-notification="closeNot"></notification>
-    <!-- =======================================================================================
+        <notification @close-notification="closeNot"></notification>
+        <!-- =======================================================================================
         NAVIGATIONS
         =========================================================================================-->
+
         <primary_menu></primary_menu>
         <secondary_menu @request-page="requestPage"></secondary_menu>
-    </div>
 
+        <footer_el></footer_el>
+    </div>
     <!-- =========================================================================================
 START OF THE PAGE
 ==============================================================================================-->
@@ -205,7 +207,7 @@ START OF THE PAGE
 
         </section>
 
-        <footer></footer>
+        <footer id="footer"></footer>
     </main>
 </div>
 
