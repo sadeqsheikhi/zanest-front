@@ -63,12 +63,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             new HtmlWebpackPlugin({
                 filename: "teachers.html",
                 template: "./src/teachers.html",
-                inject: "body",
+                inject: false,
+                minify: true
             }),
             new HtmlWebpackPlugin({
                 filename: "teachers_edit.html",
                 template: "./src/teachers_edit.html",
-                inject: "body",
+                inject: false,
+                minify: true
+            }),
+            new HtmlWebpackPlugin({
+                filename: "users.html",
+                template: "./src/users.html",
+                inject: false,
+                minify: true
             }),
             // new HtmlWebpackPlugin({
             //     filename: "classes_add.html",
@@ -102,11 +110,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             //     template: "./src/settings_inst.html",
             //     inject: "body",
             // }),
-            // new HtmlWebpackPlugin({
-            //     filename: "users.html",
-            //     template: "./src/users.html",
-            //     inject: "body",
-            // }),
+
             // new HtmlWebpackPlugin({
             //     filename: "classes.html",
             //     template: "./src/classes.html",

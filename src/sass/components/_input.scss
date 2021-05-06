@@ -7,15 +7,36 @@ input {
   @apply p-4 my-2 shadow rounded-md;
 }
 
+input.common, select.common {
+  @apply h-full w-full p-2 rounded-md;
+  height: 4rem;
+  border-bottom: 4px solid #8a8a8a;
+  box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+
+.input-group {
+  @apply h-full w-full flex flex-row flex-nowrap justify-between items-start;
+
+  div {
+    @apply h-full;
+    margin-left: 0.5rem;
+    flex: 1;
+    min-width: 3rem;
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+}
 
 input, select {
   &.fail {
     @apply  border-b-4 border-rose-500;
   }
   &.success {
-    @apply  border-b-4 border-rose-500;
+    @apply  border-b-4 border-green-500;
   }
 }
+
 
 .input-guide {
   @apply text-sm text-right text-gray-500 p-2;
