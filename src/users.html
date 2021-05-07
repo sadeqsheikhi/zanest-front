@@ -31,110 +31,18 @@
             <h1 class="text-4xl ml-8">
                 مدیریت کاربران سیستم
             </h1>
-            <button class="btn btn-secondary flex items-center">
+            <button class="btn btn-small btn-secondary flex items-center" @click="showAddUser">
                 ایجاد کاربر
                 <i class="fas fa-plus mr-2"></i>
             </button>
         </div>
 
 
-        <!-- =========================================================================================
-SETTINGS BODY
-==============================================================================================-->
-        <section class="w-30p">
-            <div class="main-section">
-                <div class="section-title-2">
-                    <h2>
-                        کاربرهای فعلی
-                    </h2>
-                    <hr>
-                </div>
-                <div class="section-content">
-                    <div class="setting-item setting-item-active">
-                            <span>
-                                صادق شیخی (شما)
-                            </span>
-                        <span class="flex-1 mr-4 text-gray-500">
-                                مدیر
-                            </span>
-                        <i class="far fa-edit text-xl"></i>
-                    </div>
-
-                    <div class="setting-item w-full">
-                            <span>
-                                گیتی جواهری
-                            </span>
-                        <span class="flex-1 mr-4 text-gray-500">
-                                منشی
-                            </span>
-                        <i class="far fa-edit text-xl"></i>
-                    </div>
-
-                    <div class="setting-item w-full">
-                            <span>
-                                جسیکا آلبا
-                            </span>
-                        <span class="flex-1 mr-4 text-gray-500">
-                                منشی
-                            </span>
-                        <i class="far fa-edit text-xl"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="w-30p">
-            <div class="main-section">
-                <div class="section-title-2">
-                    <h2>
-                        ویرایش کاربر
-                    </h2>
-                    <hr>
-                </div>
-                <div class="section-content">
-                    <div class="flex flex-row flex-nowrap items-center mb-4 justify-center">
-                        <div class="ml-4">
-                            <span>نام</span>
-                            <input type="text" class="input-norm" value="صادق شیخی">
-                        </div>
-
-                        <div>
-                            <span>کدملی</span>
-                            <input type="text" class="input-norm" value="3810449326">
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row flex-nowrap mb-4 items-center justify-center">
-                        <div class="ml-4">
-                            <span>نقش</span>
-                            <select name="" id="" class="input-norm">
-                                <option value="">منشی</option>
-                                <option value="" selected>مدیر</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <span>شماره تماس</span>
-                            <input type="text" class="input-norm" value="09182958875">
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row flex-nowrap mb-4 items-center justify-center">
-                        <div class="flex-fullrow">
-                            <span>آدرس ایمیل</span>
-                            <input type="email" class="input-norm" value="sadeghshaikhi77@gmail.com">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="save">
-                    <button>
-                        ویرایش
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section class="w-30p"></section>
-
+        <div class="flex-fullrow flex flex-row flex-nowrap justify-start items-start p-10 pt-0">
+            <all_users @refresh="refreshUsers"></all_users>
+            <add_user v-if="adding" @cancel-add-user="hideAdd" @refresh="refreshUsers"></add_user>
+            <add_user v-if="editing"></add_user>
+        </div>
 
         <footer id="footer"></footer>
     </main>
@@ -144,7 +52,7 @@ SETTINGS BODY
 </script>
 <script>
     require('./js/all.js')
-    require('./js/students.js')
+    require('./js/users.js')
 </script>
 </body>
 </html>

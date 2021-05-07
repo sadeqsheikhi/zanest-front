@@ -58,6 +58,8 @@ main {
     @apply w-full pb-16 relative text-right flex flex-wrap flex-row justify-evenly items-start pt-10v md:pr-56 pt-4 min-h-screen bg-white bg-cover;
     background: url('../media/main-bg.jpg') fixed top left;
     transition: all ease .2s;
+    justify-content: space-evenly;
+    align-content: flex-start;
 }
 
 footer {
