@@ -2,7 +2,7 @@
 // NAVIGATION AND DROPDOWN
 // ======================================================================================================
 .main-nav {
-    @apply w-screen bg-purple-900 text-white flex flex-row flex-nowrap items-center justify-between;
+    @apply w-screen text-white flex flex-row flex-nowrap items-center justify-between;
     z-index: 2001;
 }
 
@@ -137,7 +137,7 @@ footer {
 
 // ================== BIG SECTION
 .big-section {
-    @apply w-full bg-gray-100 text-right px-10 py-10 mb-16;
+    @apply w-full bg-gray-100 text-right px-10 py-10 rounded-lg mb-16 mr-10 ml-10;
     .section-title {
         @apply mb-8;
         h2 {
@@ -152,7 +152,7 @@ footer {
 // ======================================================================================================
 
 .settings-bar ul li {
-    @apply px-10;
+    @apply px-6 w-full;
 }
 
 .setting-active {
