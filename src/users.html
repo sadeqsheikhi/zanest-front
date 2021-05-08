@@ -39,9 +39,9 @@
 
 
         <div class="flex-fullrow flex flex-row flex-nowrap justify-start items-start p-10 pt-0">
-            <all_users @refresh="refreshUsers"></all_users>
+            <all_users @refresh="refreshUsers" @edit-user="userEdit" @delete-user="userDelete"></all_users>
             <add_user v-if="adding" @cancel-add-user="hideAdd" @refresh="refreshUsers"></add_user>
-            <add_user v-if="editing"></add_user>
+            <edit_user v-if="editing" @cancel-edit-user="hideEdit" @refresh="refreshUsers"></edit_user>
         </div>
 
         <footer id="footer"></footer>
