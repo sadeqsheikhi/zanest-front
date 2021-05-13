@@ -79,8 +79,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                 minify: true
             }),
             new HtmlWebpackPlugin({
-                filename: "settings_levels.html",
-                template: "./src/settings_levels.html",
+                filename: "settings.html",
+                template: "./src/settings.html",
                 inject: false,
                 minify: true
             }),
@@ -91,8 +91,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             //     minify: true
             // }),
             // new HtmlWebpackPlugin({
-            //     filename: "settings_topics.html",
-            //     template: "./src/settings_topics.html",
+            //     filename: "settings.html",
+            //     template: "./src/settings.html",
             //     inject: "body",
             // }),
 

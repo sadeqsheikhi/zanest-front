@@ -154,11 +154,19 @@ footer {
 // ======================================================================================================
 
 .settings-bar ul li {
-    @apply px-6 w-full;
+    @apply px-6 w-full h-full px-10 flex flex-row justify-center items-center;
+    &:hover {
+        cursor: pointer;
+        @apply bg-gray-300;
+    }
 }
 
-.setting-active {
-    @apply bg-purple-700 text-white h-full flex flex-row items-center px-10;
+.settings-bar ul li.setting-active {
+    @apply bg-purple-700 text-white;
+    &:hover {
+        cursor: initial;
+        @apply bg-purple-700;
+    }
 }
 
 .setting-item  {
