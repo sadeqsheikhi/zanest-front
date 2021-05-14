@@ -170,7 +170,16 @@ footer {
 }
 
 .setting-item  {
-    @apply flex justify-between items-center p-4 bg-gray-300 rounded-lg mb-3;
+    @apply flex justify-between items-center bg-gray-300 rounded-lg mb-3;
+    span, i {
+     @apply py-4;
+    }
+    span:first-child {
+        @apply pr-4;
+    }
+    i:last-child {
+        @apply pl-4;
+    }
 }
 
 
