@@ -7,12 +7,17 @@ input {
   @apply p-4 my-2 shadow rounded-md;
 }
 
-input.common, select.common {
+input.common, select.common, textarea.common {
   @apply h-full w-full p-2 rounded-md;
   height: 3.7rem;
   border-bottom: 4px solid #8a8a8a;
   box-shadow: 0 0 2px rgba(0,0,0,.5);
 }
+
+textarea.common {
+  height: 6rem;
+}
+
 
 .input-group {
   @apply h-full w-full flex flex-row flex-nowrap justify-between items-start;
