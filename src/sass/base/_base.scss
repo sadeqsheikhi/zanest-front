@@ -11,6 +11,12 @@
   src: url("../fonts/IRANSansWeb.woff") format('woff');
 }
 
+@font-face {
+  font-family: iransansen;
+  font-weight: normal;
+  src: url("../fonts/IRANSansWebEn.woff") format('woff');
+}
+
 body {
   direction: rtl;
   box-sizing: border-box;
@@ -21,6 +27,9 @@ body {
   -webkit-user-select: text;
 }
 
+*[lang="en"] {
+  font-family: 'iransansen', sans-serif;
+}
 
 
 
