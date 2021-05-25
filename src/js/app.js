@@ -1,4 +1,5 @@
 import "../fonts/IRANSansWeb.woff"
+import "../fonts/IRANSansWebEn.woff"
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import "@fortawesome/fontawesome-free/css/v4-shims.min.css"
 import "../sass/main.scss"
