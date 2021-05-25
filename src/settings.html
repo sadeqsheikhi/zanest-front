@@ -43,9 +43,9 @@
                     <li :class="[activeMenu === 'timeSlices' ? 'setting-active': '']" @click="changeActiveMenu('timeSlices')">
                         ساعات کاری
                     </li>
-                    <li class="rounded-tl-full rounded-bl-full" :class="[activeMenu === 'institution' ? 'setting-active': '']"
-                        @click="changeActiveMenu('institution')">
-                        اطلاعات آموزشگاه
+                    <li class="rounded-tl-full rounded-bl-full" :class="[activeMenu === 'classRooms' ? 'setting-active': '']"
+                        @click="changeActiveMenu('classRooms')">
+                        کلاس ها و آموزشگاه
                     </li>
                 </ul>
             </div>
@@ -56,6 +56,7 @@ SETTINGS BODY
             <topics v-if="activeMenu === 'topics'"></topics>
             <semesters v-if="activeMenu === 'semesters'"></semesters>
             <time_slices v-if="activeMenu === 'timeSlices'"></time_slices>
+            <class_rooms v-if="activeMenu === 'classRooms'"></class_rooms>
 
 
         <footer id="footer"></footer>
