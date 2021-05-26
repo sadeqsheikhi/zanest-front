@@ -8,6 +8,7 @@ import "../media/logofull.png"
 import "../media/login-bg.jpg"
 import "../media/main-bg.jpg"
 import "../media/wordofday.jpg"
+import "../media/update.PNG"
 
 // js files
 // import "./settings"

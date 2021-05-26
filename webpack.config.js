@@ -90,11 +90,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             //     inject: false,
             //     minify: true
             // }),
-            // new HtmlWebpackPlugin({
-            //     filename: "settings.html",
-            //     template: "./src/settings.html",
-            //     inject: "body",
-            // }),
+            new HtmlWebpackPlugin({
+                filename: "themeUpdate.html",
+                template: "./src/themeUpdate.html",
+                inject: false,
+                minify: true
+            }),
 
             // new HtmlWebpackPlugin({
             //     filename: "settings_semesters.html",
@@ -108,8 +109,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
             // }),
             //
             // new HtmlWebpackPlugin({
-            //     filename: "settings_inst.html",
-            //     template: "./src/settings_inst.html",
+            //     filename: "themeUpdate.html",
+            //     template: "./src/themeUpdate.html",
             //     inject: "body",
             // }),
 
