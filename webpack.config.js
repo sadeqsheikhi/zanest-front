@@ -97,28 +97,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
                 minify: true
             }),
 
-            // new HtmlWebpackPlugin({
-            //     filename: "settings_semesters.html",
-            //     template: "./src/settings_semesters.html",
-            //     inject: "body",
-            // }),
-            // new HtmlWebpackPlugin({
-            //     filename: "settings_times.html",
-            //     template: "./src/settings_times.html",
-            //     inject: "body",
-            // }),
-            //
-            // new HtmlWebpackPlugin({
-            //     filename: "themeUpdate.html",
-            //     template: "./src/themeUpdate.html",
-            //     inject: "body",
-            // }),
-
-            // new HtmlWebpackPlugin({
-            //     filename: "classes.html",
-            //     template: "./src/classes.html",
-            //     inject: "body",
-            // }),
+            new HtmlWebpackPlugin({
+                filename: "classes.html",
+                template: "./src/classes.html",
+                inject: false,
+                minify: true
+            }),
 
             // new HtmlWebpackPlugin({
             //     filename: "classes_search.html",
