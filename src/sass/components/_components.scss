@@ -157,15 +157,20 @@ footer {
     @apply px-6 w-full h-full px-10 flex flex-row justify-center items-center;
     &:hover {
         cursor: pointer;
-        @apply bg-gray-300;
+
+    }
+}
+
+.settings-bar ul li :not(.setting-active) {
+    :hover {
+        @apply hover:bg-gray-300
     }
 }
 
 .settings-bar ul li.setting-active {
-    @apply bg-purple-700 text-white;
+    @apply text-white;
     &:hover {
         cursor: initial;
-        @apply bg-purple-700;
     }
 }
 

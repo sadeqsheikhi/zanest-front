@@ -11,6 +11,7 @@
   border-collapse: separate;
   -webkit-border-vertical-spacing: 10px;
   -webkit-border-horizontal-spacing: 0;
+  min-width: 100%;
 
   tbody, thead {
     @apply rounded-2xl;
@@ -31,7 +32,7 @@
   }
 
   .header {
-    @apply bg-purple-800 text-white rounded-2xl;
+    @apply text-white rounded-2xl;
   }
 
   tr:not(.header) {
