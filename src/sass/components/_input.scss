@@ -175,9 +175,9 @@ input, select {
 
 // ===================== CLASS TIME SLICE SELECTION
 .class-time-select {
-  @apply flex flex-row flex-wrap justify-start items-start;
+  @apply flex flex-row flex-wrap justify-between items-start;
   > div {
-    @media (min-width: 768px) {
+    @media (min-width: 640px) {
       flex: 0 1 calc((100% - (5rem)) / 3);
     }
     @media (min-width: 1024px) {

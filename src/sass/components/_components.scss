@@ -196,7 +196,8 @@ footer {
 // TIME TABLE
 // ======================================================================================================
 .timetable {
-    @apply w-full text-center;
+    min-width: 100%;
+    @apply w-max text-center;
     tr {
         @apply border-b-2 border-blue-200 max-h-24;
 
@@ -204,21 +205,21 @@ footer {
             @apply  bg-gray-800 text-white;
         }
 
-        &:nth-child(odd) {
-            @apply bg-green-100;
-        }
+        //&:nth-child(odd):not(:first-child){
+        //    @apply bg-green-100;
+        //}
     
-        &:nth-child(even) {
-            @apply bg-purple-200;
+        &:nth-child(even):not(:first-child){
+            @apply bg-purple-100;
         }
         &:first-child {
-            @apply bg-pink-700 text-white;
+            @apply text-white;
         }
     }
 
     
     th {
-        @apply p-4 ltr;
+        @apply p-4 ltr border-l-2 border-blue-200;
     }
     td {
         @apply align-middle border-l-2 border-blue-200;
@@ -228,7 +229,7 @@ footer {
     }
 
     .timetable-item {
-        @apply  rounded-lg p-3 mb-2 bg-gray-500 text-white text-xs;
+        @apply  rounded-lg p-3 mb-2 bg-gray-600 text-white text-xs;
         p:first-child {
             @apply text-sm font-bold flex-fullrow;
         }
