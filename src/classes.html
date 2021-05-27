@@ -17,7 +17,7 @@
         =========================================================================================-->
 
         <primary_menu></primary_menu>
-        <secondary_menu @request-page="requestPage" current-page="students"></secondary_menu>
+        <secondary_menu @request-page="requestPage" current-page="classes"></secondary_menu>
 
         <footer_el></footer_el>
     </div>
@@ -25,7 +25,7 @@
     <!-- =========================================================================================
 START OF THE PAGE
 ==============================================================================================-->
-    <main>
+    <main id="main">
         <div class="flex-fullrow flex items-center text-white p-10">
             <h1 class="text-4xl ml-8">
                 مدیریت کلاس ها
@@ -36,26 +36,11 @@ START OF THE PAGE
         <!-- =========================================================================================
 BODY
 ==============================================================================================-->
-        <section class="search-and-button">
-            <button class="h-28">
-                <i class="fas fa-plus"></i>
-                کلاس جدید
-            </button>
-            <div>
-                <div>
-                    <input type="text" placeholder="جست و جو ...">
-                    <span>
-                        براساس
-                    </span>
-                    <select name="" id="" class="">
-                        <option value="">سرفصل</option>
-                        <option value="">استاد</option>
-                        <option value="">مکان فیزیکی</option>
-                    </select>
-                </div>
-            </div>
-        </section>
+        <!-- create section -->
+        <search_add @open-search-result="openEditPage" @adding-class="addClass"></search_add>
+        <add_class @cancel-add="cancelAddClass"></add_class>
         <!-- ====================================== Time Table ======================================== -->
+
         <section class="big-section">
             <div class="section-title">
                 <h2>

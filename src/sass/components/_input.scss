@@ -134,6 +134,18 @@ input, select {
       flex: 0 1 calc((100% - (5rem)) / 3);
     }
   }
+
+  > div.flex-1\/4 {
+    @media (min-width: 1024px) {
+      flex: 0 1 calc((100% - (5rem)) / 4);
+    }
+  }
+
+  > div.flex-1\/5 {
+    @media (min-width: 1024px) {
+      flex: 0 1 calc((100% - (5rem)) / 5);
+    }
+  }
 }
 
 // ===================== TIME SELECT BOX
@@ -157,10 +169,19 @@ input, select {
       }
     }
 
-    select {
-      @apply p-2 border-danger;
+  }
+}
+
+
+// ===================== CLASS TIME SLICE SELECTION
+.class-time-select {
+  @apply flex flex-row flex-wrap justify-start items-start;
+  > div {
+    @media (min-width: 768px) {
+      flex: 0 1 calc((100% - (5rem)) / 3);
+    }
+    @media (min-width: 1024px) {
+      flex: 0 1 calc((100% - (5rem)) / 6);
     }
   }
-
-
 }
